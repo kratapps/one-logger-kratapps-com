@@ -1,0 +1,5 @@
+nav:
+  - Logger: Logger.md
+  - Log: Log.md
+  - InvocableLog: InvocableLog.md
+  - PermissionManager: PermissionManager.md

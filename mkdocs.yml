@@ -1,1 +1,59 @@
-site_name: My Docs
+site_name: One Logger
+#nav:
+#  - Docs: index.md
+#  - Release Notes: '/one-logger/release-notes/'
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - awesome-pages
+theme:
+  name: material
+  logo: assets/logo_kratapps.svg
+  features:
+  #  - index.pages
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      accent: custom
+#      toggle:
+#        icon: material/toggle-switch
+#        name: dark mode
+#    - scheme: slate
+#      primary: black
+#      accent: indigo
+#      toggle:
+#        icon: material/toggle-switch-off
+#        name: light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css

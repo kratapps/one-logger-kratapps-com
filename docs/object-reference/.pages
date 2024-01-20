@@ -1,0 +1,12 @@
+nav:
+  - Log: ok__Log__c.md
+  - Transaction Log: ok__Transaction_Log__c.md
+  - Log Event: ok__Log_Event__e.md
+  - Tag: ok__Tag__c.md
+  - Log Tag: ok__Log_Tag__c.md
+  - Log Search: ok__Log_Search__c.md
+  - Log Filter: ok__Log_Filter__mdt.md
+  - Logger Settings: ok__Logger_Settings__mdt.md
+  - Logger Hierarchy Settings: ok__Logger_Hierarchy_Settings__c.md
+  - External Log Import: ok__External_Log_Import__mdt.md
+  - External Log Field Mapping: ok__External_Log_Field_Mapping__mdt.md
