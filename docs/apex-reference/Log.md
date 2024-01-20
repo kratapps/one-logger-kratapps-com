@@ -1,4 +1,4 @@
-# Apex Log Reference
+# Log Reference
 
 Type: Apex Class
 
