@@ -63,7 +63,7 @@ extra_javascript:
 nav:
   - Docs:
     - Getting Stared:
-      - Setup: docs/getting-started/installation.md
+      - Setup: docs/getting-started/setup.md
       - Best Practices: docs/getting-started/best-practices.md
     - Logger App:
       - Logger App: docs/app/README.md
