@@ -1,6 +1,9 @@
 nav:
   - Installation: installation.md 
   - One Logger App: one-logger-app.md 
+  - Logs Explorer: logs-explorer.md
+  - Logs Monitor: logs-monitor.md
+  - Logs Table: logs-table.md
   - Admin Console: admin-console.md 
   - Logs Cleaner: logs-cleaner.md 
   - Permission Manager: permission-manager.md 

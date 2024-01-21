@@ -1,4 +1,5 @@
 # Best Practices
 
--   Avoid logging from within a for loop. Bulkify your logs wherever possible.
+-   Avoid logging from within a for loop. Bulkify your logs wherever possible to save CPU time.
+-   Avoid logging governor limits when not needed to save CPU time.
 -   Avoid creating triggers/flows on the `ok__Log__c` object. Instead, create a custom plugin.
