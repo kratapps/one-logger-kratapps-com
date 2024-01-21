@@ -7,7 +7,7 @@ API Name: `ok.PermissionManager`
 ## Static Methods
 
 | Method                  | Params           | Returns | Description                                                                                                |
-| ----------------------- |------------------| ------- | ---------------------------------------------------------------------------------------------------------- |
+| ----------------------- | ---------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
 | assignLicense           | Set<Id\> userIds |         | Assign One Logger license. Issues are logged, duplicate assignments are ignored.                           |
 | assignAdminPermSet      | Set<Id\> userIds |         | Assign One Logger Logger_Admin permission set. Issues are logged, duplicate assignments are ignored.       |
 | assignCreateLogsPermSet | Set<Id\> userIds |         | Assign One Logger Logger_Create_Logs permission set. Issues are logged, duplicate assignments are ignored. |

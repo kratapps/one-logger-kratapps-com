@@ -11,7 +11,7 @@ Note that this class is completely different from the `ok__Log__c` custom sobjec
 ## Methods
 
 | Method          | Params                                            | Returns | Description                                                                                                         |
-| --------------- |---------------------------------------------------| ------- | ------------------------------------------------------------------------------------------------------------------- |
+| --------------- | ------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | log             | String message                                    | ok.Log  | Registers the log. Log will be printed to console and prepared for publishing.                                      |
 | hideSecrets     | Set<String\> secrets                              | ok.Log  | Removes secrets from logs.                                                                                          |
 | hideSecret      | String secret                                     | ok.Log  | Removes secret from logs.                                                                                           |

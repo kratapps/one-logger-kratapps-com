@@ -7,7 +7,7 @@ API Name: `ok.Logger`
 ## Static Methods
 
 | Method                  | Params                        | Returns   | Description                                                               |
-| ----------------------- |-------------------------------| --------- | ------------------------------------------------------------------------- |
+| ----------------------- | ----------------------------- | --------- | ------------------------------------------------------------------------- |
 | getLogger               | Type classType                | ok.Logger | Static factory method to create a One Logger instance.                    |
 | getTriggerLogger        |                               | ok.Logger | Static factory method to create a One Logger Trigger instance.            |
 | getAnonymousBlockLogger |                               | ok.Logger | Static factory method to create a One Logger Anonymous Block instance.    |
@@ -37,7 +37,7 @@ API Name: `ok.Logger`
 ## Methods
 
 | Method              | Params                                                           | Returns      | Description                                                                                                                                                      |
-| ------------------- |------------------------------------------------------------------| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------- | ---------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | error               |                                                                  | ok.Log       | Create a log at level ERROR.                                                                                                                                     |
 | warn                |                                                                  | ok.Log       | Create a log at level WARN.                                                                                                                                      |
 | info                |                                                                  | ok.Log       | Create a log at level INFO.                                                                                                                                      |
