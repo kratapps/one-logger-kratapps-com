@@ -1,0 +1,19 @@
+{
+  "name": "one-logger-docs",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "husky install",
+    "prettier-all": "prettier --write src/**/*.{md,json,js}",
+    "prettier-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.5.0",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "**/*.{md,json,js}": [
+      "prettier --write"
+    ]
+  }
+}
