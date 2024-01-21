@@ -18,7 +18,7 @@ Collect and monitor logs across all your Salesforce apps.
 
 ## Contents
 
--   [Docs](docs/getting-started/installation.md)
+-   [Docs](docs/getting-started/setup.md)
 -   [Object Reference](reference/ok__Log__c.md)
 -   [Apex Reference](reference/Logger.md)
 -   [Release Notes](release-notes/1.44.md)
