@@ -1,5 +1,7 @@
 # Unit Testing
 
+## Fail tests automatically on error
+
 When an error is logged from within a unit test, an `ErrorLoggedException` exception is thrown by default to fail the test.
 Sometimes, it is expected in the test for an error to be logged.
 In that case, you can disable this behavior using `LoggerTestUtil.disableErrorLoggedException();`.
@@ -43,6 +45,8 @@ private class MyTestClass {
     }
 }
 ```
+
+## Enable system debug
 
 System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
 You can enable system debug in unit tests explicitly using `LoggerTestUtil.enableDebugLogs();`.
