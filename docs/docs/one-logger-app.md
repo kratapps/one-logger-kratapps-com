@@ -1,5 +1,7 @@
 # Logger App
 
+The `One Logger` app can be used to configure the logger, view, and search logs and related records.
+
 The Logger application can be opened by using `App Launached` and searching for `One Logger`.
 
 The app provides:
