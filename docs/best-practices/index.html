@@ -355,6 +355,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -421,6 +427,69 @@
   
   <span class="md-ellipsis">
     One Logger App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs Explorer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs-monitor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs Monitor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logs Table
   </span>
   
 
@@ -1239,7 +1308,8 @@
 
 <h1 id="best-practices">Best Practices</h1>
 <ul>
-<li>Avoid logging from within a for loop. Bulkify your logs wherever possible.</li>
+<li>Avoid logging from within a for loop. Bulkify your logs wherever possible to save CPU time.</li>
+<li>Avoid logging governor limits when not needed to save CPU time.</li>
 <li>Avoid creating triggers/flows on the <code>ok__Log__c</code> object. Instead, create a custom plugin.</li>
 </ul>
 
