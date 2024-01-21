@@ -1,6 +1,6 @@
 # Logs Table
 
-The "Logs Table" is a custom table component designed specifically for Logs.
+The `Logs Table` is a custom table component designed specifically for Logs.
 
 Following custom actions/buttons are available on the logs table component.
 
