@@ -6,6 +6,8 @@ API Name: `ok__Log_Search__c`
 
 User defined logs filter. Includes a list of logs and statistics.
 
+## Fields
+
 | Label                | Name                            | Type          | Required | Description                                                                                                            |
 | -------------------- | ------------------------------- | ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Created By ID        | CreatedById                     | reference     | true     |                                                                                                                        |

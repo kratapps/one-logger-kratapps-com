@@ -6,6 +6,8 @@ API Name: `ok__Logger_Hierarchy_Settings__c`
 
 One Logger hierarchical configuration.
 
+## Fields
+
 | Label                      | Name                                  | Type      | Required | Description                                                                                                                            |
 | -------------------------- | ------------------------------------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Created By ID              | CreatedById                           | reference | true     |                                                                                                                                        |

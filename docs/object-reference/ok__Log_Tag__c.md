@@ -6,6 +6,8 @@ API Name: `ok__Log_Tag__c`
 
 Junction object between Log and Tag objects.
 
+## Fields
+
 | Label               | Name                  | Type      | Required | Description |
 | ------------------- | --------------------- | --------- | -------- | ----------- |
 | Created By ID       | CreatedById           | reference | true     |             |

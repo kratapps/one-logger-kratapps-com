@@ -6,6 +6,8 @@ API Name: `ok__External_Log_Import__mdt`
 
 Configure external logs import to One Logger.
 
+## Fields
+
 | Field Label                 | API Name                            | Type     | Required | Description                                                              |
 | --------------------------- | ----------------------------------- | -------- | -------- | ------------------------------------------------------------------------ |
 | Custom Metadata Record Name | DeveloperName                       | string   | true     |                                                                          |

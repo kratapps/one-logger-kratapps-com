@@ -6,6 +6,8 @@ API Name: `ok__Logger_Settings__mdt`
 
 One Logger org-wide configuration.
 
+## Fields
+
 | Label                                   | Name                                               | Type     | Required | Description                                                                                                                      |
 | --------------------------------------- | -------------------------------------------------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Custom Metadata Record Name             | DeveloperName                                      | string   | true     |                                                                                                                                  |

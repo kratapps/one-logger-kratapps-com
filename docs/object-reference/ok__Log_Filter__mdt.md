@@ -6,6 +6,8 @@ API Name: `ok__Log_Filter__mdt`
 
 Configurable logs filter.
 
+## Fields
+
 | Label                       | Name                            | Type     | Required | Description                                                                                    |
 | --------------------------- | ------------------------------- | -------- | -------- | ---------------------------------------------------------------------------------------------- |
 | Custom Metadata Record Name | DeveloperName                   | string   | true     |                                                                                                |

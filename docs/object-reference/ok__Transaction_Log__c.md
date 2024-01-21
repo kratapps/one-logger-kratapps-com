@@ -6,6 +6,8 @@ API Name: `ok__Transaction_Log__c`
 
 Parent log with grouped logs per transaction.
 
+## Fields
+
 | Label                           | Name                                       | Type      | Required | Description                                                                                                                                                                                                                                       |
 | ------------------------------- | ------------------------------------------ | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Created By ID                   | CreatedById                                | reference | true     |                                                                                                                                                                                                                                                   |
@@ -58,5 +60,3 @@ Parent log with grouped logs per transaction.
 | User Type                       | ok\_\_User_Type\_\_c                       | string    | false    | Context user's type.                                                                                                                                                                                                                              |
 | User Username                   | ok\_\_User_Username\_\_c                   | string    | false    | Context user's username.                                                                                                                                                                                                                          |
 | User                            | ok\_\_User\_\_c                            | reference | false    | Context user.                                                                                                                                                                                                                                     |
-
-![Transaction Log](https://kratapps.com/images/one-logger/transaction_log.png "Transaction Log")

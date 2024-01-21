@@ -6,6 +6,8 @@ API Name: `ok__Tag__c`
 
 Add tags to your logs.
 
+## Fields
+
 | Label                | Name                  | Type      | Required | Description |
 | -------------------- | --------------------- | --------- | -------- | ----------- |
 | Created By ID        | CreatedById           | reference | true     |             |
