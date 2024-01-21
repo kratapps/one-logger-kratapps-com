@@ -1,5 +1,10 @@
 # Unit Testing
 
+## Enable system debug
+
+System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
+You can enable system debug in unit tests explicitly using `LoggerTestUtil.enableDebugLogs();`.
+
 ## Fail tests automatically on error
 
 When an error is logged from within a unit test, an `ErrorLoggedException` exception is thrown by default to fail the test.
@@ -45,8 +50,3 @@ private class MyTestClass {
     }
 }
 ```
-
-## Enable system debug
-
-System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
-You can enable system debug in unit tests explicitly using `LoggerTestUtil.enableDebugLogs();`.
