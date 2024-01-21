@@ -11,8 +11,8 @@ The app provides:
     -   [Transaction Logs](/object-reference/ok__Transaction_Log__c) - Parent logs with logs grouped per transaction.
     -   [Tags](/object-reference/ok__Tag__c) - Tags and their related logs.
     -   [Log Searches](/object-reference/ok__Log_Search__c) - User defined log filters. Includes a list of logs, statistics, graphs.
--   [Logs Explorer](/docs/logs-explorer) - Custom logs view. Search logs, quickly export csv/json.
--   [Logs Monitor](/docs/logs-monitor) - Listen to Log Events in real time.
--   [Logs Table](/docs/logs-table) - Custom table component designed specifically for Logs.
--   [Logger Admin Console](/docs/admin-console) - Logger configuration overview.
--   [Logger Permission Manager](/docs/permission-manager) - View licensed users, quickly assign/remove permission sets.
+-   [Logs Explorer](/docs/app/logs-explorer) - Custom logs view. Search logs, quickly export csv/json.
+-   [Logs Monitor](/docs/app/logs-monitor) - Listen to Log Events in real time.
+-   [Logs Table](/docs/app/logs-table) - Custom table component designed specifically for Logs.
+-   [Logger Admin Console](/docs/app/admin-console) - Logger configuration overview.
+-   [Logger Permission Manager](/docs/app/permission-manager) - View licensed users, quickly assign/remove permission sets.

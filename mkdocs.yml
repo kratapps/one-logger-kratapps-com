@@ -3,7 +3,6 @@ plugins:
   - search:
 #      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
       separator: '[\s\u200b\-\.,!=\[\]()"`/]+'
-  - awesome-pages
 theme:
   name: material
   logo: assets/logo_kratapps.svg
@@ -25,8 +24,9 @@ theme:
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
+    - navigation.path
     # - navigation.prune
-    - navigation.sections
+    # - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.top
@@ -35,7 +35,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
+    - toc.integrate
   palette:
     - scheme: default
       primary: white
@@ -60,3 +60,43 @@ extra_css:
 extra_javascript:
   - scripts/highlight.min.js
   - scripts/highlightConfig.js
+nav:
+  - Docs:
+    - Getting Stared:
+      - Setup: docs/getting-started/installation.md
+      - Best Practices: docs/getting-started/best-practices.md
+    - Logger App:
+      - Logger App: docs/app/README.md
+      - Logs Explorer: docs/app/logs-explorer.md
+      - Logs Monitor: docs/app/logs-monitor.md
+      - Logs Table: docs/app/logs-table.md
+      - Admin Console: docs/app/admin-console.md
+      - Logs Cleaner: docs/app/logs-cleaner.md
+      - Permission Manager: docs/app/permission-manager.md
+    - Logger API:
+      - Unit Testing: docs/api/unit-testing.md
+      - Plugin Development: docs/api/plugin-development.md
+      - Logger for ISV: docs/api/logger-for-isv.md
+    - Pricing: pricing.md 
+  - Object Reference:
+    - Log: reference/ok__Log__c.md
+    - Transaction Log: reference/ok__Transaction_Log__c.md
+    - Log Event: reference/ok__Log_Event__e.md
+    - Tag: reference/ok__Tag__c.md
+    - Log Tag: reference/ok__Log_Tag__c.md
+    - Log Search: reference/ok__Log_Search__c.md
+    - Log Filter: reference/ok__Log_Filter__mdt.md
+    - Logger Settings: reference/ok__Logger_Settings__mdt.md
+    - Logger Hierarchy Settings: reference/ok__Logger_Hierarchy_Settings__c.md
+    - External Log Import: reference/ok__External_Log_Import__mdt.md
+    - External Log Field Mapping: reference/ok__External_Log_Field_Mapping__mdt.md
+  - Apex Reference:
+    - Logger: reference/Logger.md
+    - Log: reference/Log.md
+    - InvocableLog: reference/InvocableLog.md
+    - PermissionManager: reference/PermissionManager.md
+  - Release Notes:
+      - 1.44: release-notes/1.44.md
+      - 1.43: release-notes/1.43.md
+  - Plugins:
+      - Slack for One Logger: plugins/slack-for-one-logger.md

@@ -1,6 +1,6 @@
 # Logs Explorer
 
-Search Log records and show them in the [Logs Table](/docs/logs-table).
+Search Log records and show them in the [Logs Table](logs-table.md).
 
 ## Filters
 

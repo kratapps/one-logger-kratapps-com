@@ -1,6 +1,6 @@
 # Logs Monitor
 
-Listen to Log Events in real time and show them in the [Logs Table](/docs/logs-table).
+Listen to Log Events in real time and show them in the [Logs Table](logs-table.md).
 
 ## Filters
 
