@@ -1,2 +1,6 @@
 nav:
   - Installation: installation.md 
+  - Logger API: logger_api.md 
+  - Best Practices: best_practices.md 
+  - Plugin Development: plugin_development.md 
+  - Pricing: pricing.md 
