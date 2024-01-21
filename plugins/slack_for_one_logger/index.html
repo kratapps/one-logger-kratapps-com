@@ -1135,46 +1135,30 @@
 <p>This plugin is included in the One Logger package.</p>
 <h2 id="setup">Setup</h2>
 <ol>
-<li>Get Slack webhook URL</li>
-</ol>
-<p>Create an <a href="https://api.slack.com/messaging/webhooks">incoming webhook</a>.
-A webhook URL should look something like this:</p>
-<pre><code class="language-text">https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
-</code></pre>
-<ol>
-<li>Configure Named Credentials</li>
-</ol>
-<p>Create a new named credentials.
-Set endpoint URL to your Slack webhook URL.
-Write down the credential's name.</p>
-<ol>
-<li>Configure Log Filter</li>
-</ol>
-<p>Log Filters are custom metadata from One Logger package.
-In this plugin, we use a Log Filter records to filter Log Events to send.</p>
-<ol>
-<li>Configure Slack for One Logger Settings</li>
-</ol>
-<p><code>Slack for One Logger Settings</code> are custom metadata used to configure Slack integration.</p>
-<ul>
-<li>
-<p>Log Field Set - you can configure the fields to send in the message using a field set.
-  Value should be the field set API name. Note that this field set is created on ok<strong>Log</strong>c object
-  but the field values will be populated from ok<strong>Log_Event</strong>e record.</p>
-</li>
-<li>
-<p>Log Filter - reference to the Log Filter created in the previous step.</p>
-</li>
-<li>
-<p>Named Credentials - name of the named credentials defining the Slack webhook URL.</p>
-</li>
-<li>
-<p>Mention Here - add @here mention.</p>
-</li>
-<li>
-<p>Mention User Ids - semicolon separated list of Slack User Ids to mention in the message.</p>
-</li>
+<li>Get Slack incoming webhook<br />
+   Create an <a href="https://api.slack.com/messaging/webhooks">incoming webhook</a>.
+   A webhook URL should look something like this:
+    <code>text
+    https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX</code></li>
+<li>Configure Named Credentials<br />
+   Create a new named credentials.
+   Set endpoint URL to your Slack webhook URL.
+   Write down the credential's name.</li>
+<li>Configure Log Filter<br />
+   Log Filters are custom metadata from One Logger package.
+   In this plugin, we use a Log Filter records to filter Log Events to send.</li>
+<li>Configure Slack for One Logger Settings<br />
+<code>Slack for One Logger Settings</code> is custom metadata used to configure Slack integration.<ul>
+<li><strong>Log Field Set</strong>: Configure the fields to include in the message using a field set.
+  The value should be the field set API name. Note that this field set is created on the <code>ok__Log__c</code> object,
+  but the field values will be populated from the <code>ok__Log_Event__e</code> record.</li>
+<li><strong>Log Filter</strong>: Reference the Log Filter created in the previous step.</li>
+<li><strong>Named Credentials</strong>: Specify the name of the named credentials defining the Slack webhook URL.</li>
+<li><strong>Mention Here</strong>: Add <code>@here</code> mention.</li>
+<li><strong>Mention User Ids</strong>: Semicolon-separated list of Slack User IDs to mention in the message.</li>
 </ul>
+</li>
+</ol>
 
 
 

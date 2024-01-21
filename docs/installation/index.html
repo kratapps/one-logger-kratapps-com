@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#one-logger-installation" class="md-skip">
+        <a href="#one-logger-installation-and-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -1049,7 +1049,56 @@
                   
 
 
-<h1 id="one-logger-installation">One Logger Installation</h1>
+<h1 id="one-logger-installation-and-setup">One Logger Installation and Setup</h1>
+<ol>
+<li>
+<p><strong>Install One Logger</strong><br />
+   Install our <a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GV75lUAD">Managed Package</a> from AppExchange.</p>
+</li>
+<li>
+<p><strong>Install Unmanaged Utils</strong><br />
+   Create or install unmanaged/unpackaged utility classes for One Logger.
+   You can either create this class directly or install our unmanaged package.
+   These classes allow One Logger to:</p>
+<ul>
+<li>Debug to the system console (Apex Log).</li>
+<li>Retrieve the stack trace string.</li>
+<li>Obtain limits for your default namespace.</li>
+</ul>
+<p>To install the unmanaged package, use the following link:</p>
+<p><code>https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e000000vn4t</code></p>
+<p>Alternatively, deploy all code in the <code>src/</code> directory from the GitHub <a href="https://github.com/kratapps/one-logger-utils">one-logger-utils</a> repository.</p>
+</li>
+<li>
+<p><strong>Assign Licenses and Permission Sets</strong><br />
+   Assign licenses to users who need access to Logger Apps and Logger API.</p>
+<p>The following permission sets can be granted to users:</p>
+<ul>
+<li>Logger Admin - grants edit access to all APIs and apps, including the <code>Logger Admin Console</code> page.</li>
+<li>Logger Read Only - grants read access to logs and the <code>One Logger</code> app.</li>
+<li>Logger Create Logs - grants permission to publish logs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Schedule Logs Cleaner</strong><br />
+   This step is optional and allows you to automatically delete logs after a configured time.</p>
+</li>
+<li>
+<p><strong>Activate Log Record Page</strong><br />
+   Activate the packaged record pages as the org default on the following objects:</p>
+<ul>
+<li><code>ok__Log__c</code></li>
+<li><code>ok__Transaction_Log__c</code></li>
+<li><code>ok__Tag__c</code></li>
+<li><code>ok__Log_Tag__c</code></li>
+<li><code>ok__Log_Search__c</code></li>
+</ul>
+<p>When activated, you will enable all the features available through the record pages across all apps, not only in the One Logger app.</p>
+</li>
+<li>
+<p><strong>Check Logger Admin Console page</strong></p>
+</li>
+</ol>
 
 
 
