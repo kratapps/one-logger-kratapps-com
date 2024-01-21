@@ -4,6 +4,8 @@ Type: Apex Class
 
 API Name: `ok.InvocableLog`
 
+## Fields
+
 | Field Label      | Type   | Required | Description                                                                             |
 | ---------------- | ------ | -------- | --------------------------------------------------------------------------------------- |
 | Message          | string | true     | Log message.                                                                            |
