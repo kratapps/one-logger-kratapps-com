@@ -9,16 +9,18 @@
       
       
       
-        <link rel="prev" href="../../release-notes/1.43/">
+        <link rel="prev" href="../unit-testing/">
       
       
+        <link rel="next" href="../plugin-development/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
-        <title>Slack for One Logger - One Logger</title>
+        <title>Best Practices - One Logger</title>
       
     
     
@@ -46,6 +48,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../stylesheets/hljs-kratapps.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slack-for-one-logger" class="md-skip">
+        <a href="#best-practices" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slack for One Logger
+              Best Practices
             
           </span>
         </div>
@@ -191,11 +195,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../docs/installation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../installation/" class="md-tabs__link">
           
   
     
@@ -271,13 +277,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../plugins/slack-for-one-logger/" class="md-tabs__link">
           
   
     
@@ -326,10 +330,20 @@
       
   
   
+    
   
   
+  
     
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -340,12 +354,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -359,7 +373,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Docs
@@ -373,11 +387,105 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugin Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pricing
   </span>
   
 
@@ -936,10 +1044,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -952,12 +1058,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -971,7 +1077,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Plugins
@@ -982,30 +1088,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Slack for One Logger
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../plugins/slack-for-one-logger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,44 +1100,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setup
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1084,32 +1132,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setup
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1123,42 +1145,11 @@
                   
 
 
-<p><a href="https://kratapps.com/one-logger/plugins/slack-for-one-logger/">
-  <img title="One Logger" alt="TDF" width="60px" height="60px" align="right"
-       src="https://kratapps.com/images/one_logger_logo_200_200.png"  />
-</a></p>
-<h1 id="slack-for-one-logger">Slack for One Logger</h1>
-<p><a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GV75lUAD"><img alt="App Exchange" src="https://img.shields.io/badge/AppExchange-One%20Logger%20-blue?logo=salesforce" /></a>
-<a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GV75lUAD"><img alt="Security Review" src="https://img.shields.io/badge/Security%20Review-Passed-green" /></a></p>
-<p>One Logger Plugin to send Slack messages.</p>
-<h2 id="installation">Installation</h2>
-<p>This plugin is included in the One Logger package.</p>
-<h2 id="setup">Setup</h2>
-<ol>
-<li>Get Slack incoming webhook<br />
-   Create an <a href="https://api.slack.com/messaging/webhooks">incoming webhook</a>.
-   A webhook URL should look something like this:
-    <code>text
-    https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX</code></li>
-<li>Configure Named Credentials<br />
-   Create a new named credentials.
-   Set endpoint URL to your Slack webhook URL.
-   Write down the credential's name.</li>
-<li>Configure Log Filter<br />
-   Log Filters are custom metadata from One Logger package.
-   In this plugin, we use a Log Filter records to filter Log Events to send.</li>
-<li>Configure Slack for One Logger Settings<br />
-<code>Slack for One Logger Settings</code> is custom metadata used to configure Slack integration.<ul>
-<li><strong>Log Field Set</strong>: Configure the fields to include in the message using a field set.
-  The value should be the field set API name. Note that this field set is created on the <code>ok__Log__c</code> object,
-  but the field values will be populated from the <code>ok__Log_Event__e</code> record.</li>
-<li><strong>Log Filter</strong>: Reference the Log Filter created in the previous step.</li>
-<li><strong>Named Credentials</strong>: Specify the name of the named credentials defining the Slack webhook URL.</li>
-<li><strong>Mention Here</strong>: Add <code>@here</code> mention.</li>
-<li><strong>Mention User Ids</strong>: Semicolon-separated list of Slack User IDs to mention in the message.</li>
+<h1 id="best-practices">Best Practices</h1>
+<ul>
+<li>Avoid logging from within a for loop. Bulkify your logs wherever possible.</li>
+<li>Avoid creating triggers/flows on the <code>ok__Log__c</code> object. Instead, create a custom plugin.</li>
 </ul>
-</li>
-</ol>
 
 
 
@@ -1194,7 +1185,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../release-notes/1.43/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.43">
+          <a href="../unit-testing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unit Testing">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1204,11 +1195,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                1.43
+                Unit Testing
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../plugin-development/" class="md-footer__link md-footer__link--next" aria-label="Next: Plugin Development">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Plugin Development
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
@@ -1234,6 +1241,10 @@
     
     
       <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      
+        <script src="../../scripts/highlight.min.js"></script>
+      
+        <script src="../../scripts/highlightConfig.js"></script>
       
     
   </body>
