@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../app/permission-manager/">
       
       
-      <link rel="icon" href="assets/favicon.ico">
+        <link rel="next" href="../plugin-development/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
-        <title>One Logger</title>
+        <title>Unit Testing - One Logger</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/hljs-kratapps.css">
+      <link rel="stylesheet" href="../../../stylesheets/hljs-kratapps.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#one-logger" class="md-skip">
+        <a href="#unit-testing" class="md-skip">
           Skip to content
         </a>
       
@@ -86,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="One Logger" class="md-header__button md-logo" aria-label="One Logger" data-md-component="logo">
+    <a href="../../.." title="One Logger" class="md-header__button md-logo" aria-label="One Logger" data-md-component="logo">
       
-  <img src="assets/logo_kratapps.svg" alt="logo">
+  <img src="../../../assets/logo_kratapps.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              One Logger
+              Unit Testing
             
           </span>
         </div>
@@ -191,17 +195,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="docs/getting-started/installation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
           
   
     
@@ -224,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="reference/ok__Log__c/" class="md-tabs__link">
+        <a href="../../../reference/ok__Log__c/" class="md-tabs__link">
           
   
     
@@ -244,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="reference/Logger/" class="md-tabs__link">
+        <a href="../../../reference/Logger/" class="md-tabs__link">
           
   
     
@@ -264,7 +272,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="release-notes/1.44/" class="md-tabs__link">
+        <a href="../../../release-notes/1.44/" class="md-tabs__link">
           
   
     
@@ -284,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="plugins/slack-for-one-logger/" class="md-tabs__link">
+        <a href="../../../plugins/slack-for-one-logger/" class="md-tabs__link">
           
   
     
@@ -321,9 +329,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="One Logger" class="md-nav__button md-logo" aria-label="One Logger" data-md-component="logo">
+    <a href="../../.." title="One Logger" class="md-nav__button md-logo" aria-label="One Logger" data-md-component="logo">
       
-  <img src="assets/logo_kratapps.svg" alt="logo">
+  <img src="../../../assets/logo_kratapps.svg" alt="logo">
 
     </a>
     One Logger
@@ -335,8 +343,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -355,12 +365,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -374,7 +384,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Docs
@@ -431,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/getting-started/installation/" class="md-nav__link">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/getting-started/best-practices/" class="md-nav__link">
+      <a href="../../getting-started/best-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +523,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/app/" class="md-nav__link ">
+            <a href="../../app/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -546,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/app/logs-explorer/" class="md-nav__link">
+      <a href="../../app/logs-explorer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/app/logs-monitor/" class="md-nav__link">
+      <a href="../../app/logs-monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/app/logs-table/" class="md-nav__link">
+      <a href="../../app/logs-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -609,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/app/admin-console/" class="md-nav__link">
+      <a href="../../app/admin-console/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/app/logs-cleaner/" class="md-nav__link">
+      <a href="../../app/logs-cleaner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/app/permission-manager/" class="md-nav__link">
+      <a href="../../app/permission-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,8 +687,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -692,12 +704,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -711,7 +723,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Logger API
@@ -722,10 +734,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="docs/api/unit-testing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unit Testing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -734,6 +766,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fail-tests-automatically-on-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail tests automatically on error
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-system-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable system debug
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -746,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/api/plugin-development/" class="md-nav__link">
+      <a href="../plugin-development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/api/logger-for-isv/" class="md-nav__link">
+      <a href="../logger-for-isv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pricing/" class="md-nav__link">
+      <a href="../../../pricing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Log__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Log__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Transaction_Log__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Transaction_Log__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Log_Event__e/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Event__e/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Tag__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Tag__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Log_Tag__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Tag__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Log_Search__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Search__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Log_Filter__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Filter__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Logger_Settings__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__Logger_Settings__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__Logger_Hierarchy_Settings__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Logger_Hierarchy_Settings__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__External_Log_Import__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__External_Log_Import__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ok__External_Log_Field_Mapping__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__External_Log_Field_Mapping__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/Logger/" class="md-nav__link">
+      <a href="../../../reference/Logger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/Log/" class="md-nav__link">
+      <a href="../../../reference/Log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/InvocableLog/" class="md-nav__link">
+      <a href="../../../reference/InvocableLog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1239,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/PermissionManager/" class="md-nav__link">
+      <a href="../../../reference/PermissionManager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes/1.44/" class="md-nav__link">
+      <a href="../../../release-notes/1.44/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes/1.43/" class="md-nav__link">
+      <a href="../../../release-notes/1.43/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1406,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="plugins/slack-for-one-logger/" class="md-nav__link">
+      <a href="../../../plugins/slack-for-one-logger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,28 +1512,45 @@
                   
 
 
-<h1 id="one-logger">One Logger</h1>
-<p><a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GV75lUAD"><img alt="App Exchange" src="https://img.shields.io/badge/AppExchange-One%20Logger%20-blue?logo=salesforce" /></a>
-<a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GV75lUAD"><img alt="Security Review" src="https://img.shields.io/badge/Security%20Review-Passed-green" /></a></p>
-<p>Enterprise logger for all organizations.</p>
-<p>Collect and monitor logs across all your Salesforce apps.</p>
-<h2 id="features">Features</h2>
-<ul>
-<li>Platform event based logging utility, featuring a fluent interface.</li>
-<li>Ability to import logs from various external solutions.</li>
-<li>Support for Apex, Flows, database errors, HTTP/REST requests, inbound emails.</li>
-<li>User-friendly interface for easy exploration and monitoring of logs.</li>
-<li>Slack integration plugin.</li>
-<li>Flexibility to create custom plugins as per specific requirements.</li>
-</ul>
-<h2 id="contents">Contents</h2>
-<ul>
-<li><a href="docs/getting-started/installation/">Docs</a></li>
-<li><a href="reference/ok__Log__c/">Object Reference</a></li>
-<li><a href="reference/Logger/">Apex Reference</a></li>
-<li><a href="release-notes/1.44/">Release Notes</a></li>
-<li><a href="plugins/slack-for-one-logger/">Plugins</a></li>
-</ul>
+<h1 id="unit-testing">Unit Testing</h1>
+<h2 id="fail-tests-automatically-on-error">Fail tests automatically on error</h2>
+<p>When an error is logged from within a unit test, an <code>ErrorLoggedException</code> exception is thrown by default to fail the test.
+Sometimes, it is expected in the test for an error to be logged.
+In that case, you can disable this behavior using <code>LoggerTestUtil.disableErrorLoggedException();</code>.</p>
+<p>In the following example, the test method will fail and ends the test:</p>
+<pre><code class="language-apex">@IsTest
+static void myTest() {
+    // Next line will throw the ErrorLoggedException.
+    logger.error().log('test');
+}
+</code></pre>
+<p>Disable the <code>ErrorLoggedException</code> on a per-test method basis.</p>
+<pre><code class="language-apex">@IsTest
+static void myTest() {
+    LoggerTestUtil.disableErrorLoggedException();
+    // Error logs will not throw the ErrorLoggedException in this test method.
+    logger.error().log('test');
+}
+</code></pre>
+<p>Disable <code>ErrorLoggedException</code> on a per-test class basis.</p>
+<pre><code class="language-apex">@IsTest
+private class MyTestClass {
+    private static ok.Logger logger = ok.Logger.getLogger(MyTestClass.class);
+
+    static {
+        LoggerTestUtil.disableErrorLoggedException();
+    }
+
+    @IsTest
+    static void myTest() {
+        // Error logs will not throw the ErrorLoggedException in this test class.
+        logger.error().log('test');
+    }
+}
+</code></pre>
+<h2 id="enable-system-debug">Enable system debug</h2>
+<p>System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
+You can enable system debug in unit tests explicitly using <code>LoggerTestUtil.enableDebugLogs();</code>.</p>
 
 
 
@@ -1495,6 +1582,44 @@
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../app/permission-manager/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Permission Manager">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Permission Manager
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../plugin-development/" class="md-footer__link md-footer__link--next" aria-label="Next: Plugin Development">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Plugin Development
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1513,14 +1638,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.7389ff0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
-        <script src="scripts/highlight.min.js"></script>
+        <script src="../../../scripts/highlight.min.js"></script>
       
-        <script src="scripts/highlightConfig.js"></script>
+        <script src="../../../scripts/highlightConfig.js"></script>
       
     
   </body>
