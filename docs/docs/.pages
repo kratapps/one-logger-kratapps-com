@@ -1,6 +1,6 @@
 nav:
   - Installation: installation.md 
-  - Unit Testing: unit_testing.md 
-  - Best Practices: best_practices.md 
-  - Plugin Development: plugin_development.md 
+  - Unit Testing: unit-testing.md 
+  - Best Practices: best-practices.md 
+  - Plugin Development: plugin-development.md 
   - Pricing: pricing.md 

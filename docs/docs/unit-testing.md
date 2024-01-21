@@ -6,7 +6,7 @@ In that case, you can disable this behavior using `LoggerTestUtil.disableErrorLo
 
 Disable the `ErrorLoggedException` on a per-test method basis.
 
-```apex
+```java
 @IsTest
 static void myTest() {
     LoggerTestUtil.disableErrorLoggedException();
