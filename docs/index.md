@@ -18,8 +18,8 @@ Collect and monitor logs across all your Salesforce apps.
 
 ## Contents
 
--   [Docs](/docs/getting-started/installation.md)
--   [Object Reference](/object-reference/ok__Log__c)
--   [Apex Reference](/docs/reference/Logger.md)
--   [Release Notes](/release-notes/1.44)
--   [Plugins](/plugins/slack-for-one-logger)
+-   [Docs](docs/getting-started/installation.md)
+-   [Object Reference](reference/ok__Log__c.md)
+-   [Apex Reference](reference/Logger.md)
+-   [Release Notes](release-notes/1.44.md)
+-   [Plugins](plugins/slack-for-one-logger.md)
