@@ -56,3 +56,7 @@ extra:
   generator: false
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/hljs-kratapps.css
+extra_javascript:
+  - scripts/highlight.min.js
+  - scripts/highlightConfig.js
