@@ -4,6 +4,16 @@ When an error is logged from within a unit test, an `ErrorLoggedException` excep
 Sometimes, it is expected in the test for an error to be logged.
 In that case, you can disable this behavior using `LoggerTestUtil.disableErrorLoggedException();`.
 
+In the following example, the test method will fail and ends the test:
+
+```apex
+@IsTest
+static void myTest() {
+    // Next line will throw the ErrorLoggedException.
+    logger.error().log('test');
+}
+```
+
 Disable the `ErrorLoggedException` on a per-test method basis.
 
 ```apex
