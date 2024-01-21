@@ -4,7 +4,7 @@ Type: Custom SObject
 
 API Name: `ok__Log_Search__c`
 
-User defined logs filter. Includes a list of logs and statistics.
+User defined log filters. Includes a list of logs, statistics, graphs.
 
 ## Fields
 

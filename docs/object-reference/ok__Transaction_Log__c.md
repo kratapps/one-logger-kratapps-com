@@ -4,7 +4,7 @@ Type: Custom SObject
 
 API Name: `ok__Transaction_Log__c`
 
-Parent log with grouped logs per transaction.
+Parent log with logs grouped per transaction.
 
 ## Fields
 

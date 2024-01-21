@@ -1,5 +1,9 @@
 nav:
   - Installation: installation.md 
+  - One Logger App: one-logger-app.md 
+  - Admin Console: admin-console.md 
+  - Logs Cleaner: logs-cleaner.md 
+  - Permission Manager: permission-manager.md 
   - Unit Testing: unit-testing.md 
   - Best Practices: best-practices.md 
   - Plugin Development: plugin-development.md 
