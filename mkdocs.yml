@@ -1,7 +1,4 @@
 site_name: One Logger 
-#nav:
-#  - Docs: index.md
-#  - Release Notes: '/one-logger/release-notes/'
 plugins:
   - search:
 #      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
@@ -10,6 +7,7 @@ plugins:
 theme:
   name: material
   logo: assets/logo_kratapps.svg
+  favicon: assets/favicon.ico
   features:
   #  - index.pages
     - announce.dismiss
