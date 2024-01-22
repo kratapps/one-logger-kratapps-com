@@ -1,8 +1,8 @@
 # Logger Hierarchy Settings Reference
 
-Type: Custom Settings
+**Type**: Custom Settings
 
-API Name: `ok__Logger_Hierarchy_Settings__c`
+**API Name**: `ok__Logger_Hierarchy_Settings__c`
 
 One Logger hierarchical configuration.
 

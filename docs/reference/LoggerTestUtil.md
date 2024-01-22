@@ -1,8 +1,8 @@
 # Logger Test Util Reference
 
-Type: Apex Class
+**Type**: Apex Class
 
-API Name: `ok.LoggerTestUtil`
+**API Name**: `ok.LoggerTestUtil`
 
 This class provides features for controlling your unit test execution.
 

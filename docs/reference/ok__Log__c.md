@@ -1,8 +1,8 @@
 # Log Reference
 
-Type: Custom SObject
+**Type**: Custom SObject
 
-API Name: `ok__Log__c`
+**API Name**: `ok__Log__c`
 
 Log object.
 

@@ -1,8 +1,8 @@
 # Log Search Reference
 
-Type: Custom SObject
+**Type**: Custom SObject
 
-API Name: `ok__Log_Search__c`
+**API Name**: `ok__Log_Search__c`
 
 User defined log filters. Includes a list of logs, statistics, graphs.
 

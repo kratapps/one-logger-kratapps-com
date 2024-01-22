@@ -1,8 +1,8 @@
 # Log Event Reference
 
-Type: Platform Event
+**Type**: Platform Event
 
-API Name: `ok__Log_Event__e`
+**API Name**: `ok__Log_Event__e`
 
 Platform event for One Logger logs.
 

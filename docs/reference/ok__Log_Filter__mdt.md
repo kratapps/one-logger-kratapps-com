@@ -1,8 +1,8 @@
 # Log Filter Reference
 
-Type: Custom Metadata
+**Type**: Custom Metadata
 
-API Name: `ok__Log_Filter__mdt`
+**API Name**: `ok__Log_Filter__mdt`
 
 Configurable logs filter.
 

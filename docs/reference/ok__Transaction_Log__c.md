@@ -1,8 +1,8 @@
 # Transaction Log Reference
 
-Type: Custom SObject
+**Type**: Custom SObject
 
-API Name: `ok__Transaction_Log__c`
+**API Name**: `ok__Transaction_Log__c`
 
 Parent log with logs grouped per transaction.
 

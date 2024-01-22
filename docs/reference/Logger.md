@@ -1,8 +1,8 @@
 # Logger Reference
 
-Type: Apex Class
+**Type**: Apex Class
 
-API Name: `ok.Logger`
+**API Name**: `ok.Logger`
 
 ## Static Methods
 

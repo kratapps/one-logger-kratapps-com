@@ -1,8 +1,8 @@
 # Log Reference
 
-Type: Apex Class
+**Type**: Apex Class
 
-API Name: `ok.Log`
+**API Name**: `ok.Log`
 
 Data class used for constructing the log event.
 

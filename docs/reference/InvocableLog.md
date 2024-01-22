@@ -1,8 +1,18 @@
 # Invocable Log Reference
 
-Type: Apex Class
+**Type**: Apex Class
 
-API Name: `ok.InvocableLog`
+**API Name**: `ok.InvocableLog`
+
+Data class used for logging from flows.
+
+List of flow loggers with an invocable method leveraging this data class:
+
+-   [InvocableErrorLogger](InvocableErrorLogger.md) - Log error from a flow.
+-   [InvocableWarnLogger](InvocableWarnLogger.md) - Log warn from a flow.
+-   [InvocableInfoLogger](InvocableInfoLogger.md) - Log info from a flow.
+-   [InvocableDebugLogger](InvocableDebugLogger.md) - Log debug from a flow.
+-   [InvocableFineLogger](InvocableFineLogger.md) - Log fine from a flow.
 
 ## Fields
 

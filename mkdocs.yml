@@ -74,6 +74,8 @@ nav:
       - Logs Cleaner: docs/app/logs-cleaner.md
       - Permission Manager: docs/app/permission-manager.md
     - Logger API:
+      - Logger API: docs/api/index.md
+      - Flow Logging: docs/api/flow-logging.md
       - Unit Testing: docs/api/unit-testing.md
       - Plugin Development: docs/api/plugin-development.md
       - Logger for ISV: docs/api/logger-for-isv.md

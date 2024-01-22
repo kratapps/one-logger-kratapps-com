@@ -1,8 +1,8 @@
 # External Log Import Reference
 
-Type: Custom Metadata
+**Type**: Custom Metadata
 
-API Name: `ok__External_Log_Import__mdt`
+**API Name**: `ok__External_Log_Import__mdt`
 
 Configure external logs import to One Logger.
 

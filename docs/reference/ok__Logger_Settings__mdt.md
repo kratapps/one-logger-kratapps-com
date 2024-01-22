@@ -1,8 +1,8 @@
 # Logger Settings Reference
 
-Type: Custom Metadata
+**Type**: Custom Metadata
 
-API Name: `ok__Logger_Settings__mdt`
+**API Name**: `ok__Logger_Settings__mdt`
 
 One Logger org-wide configuration.
 

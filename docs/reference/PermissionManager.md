@@ -1,8 +1,8 @@
 # Permission Manager Reference
 
-Type: Apex Class
+**Type**: Apex Class
 
-API Name: `ok.PermissionManager`
+**API Name**: `ok.PermissionManager`
 
 ## Static Methods
 

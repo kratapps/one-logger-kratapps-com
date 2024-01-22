@@ -1,8 +1,8 @@
 # Log Tag Reference
 
-Type: Custom SObject
+**Type**: Custom SObject
 
-API Name: `ok__Log_Tag__c`
+**API Name**: `ok__Log_Tag__c`
 
 Junction object between Log and Tag objects.
 

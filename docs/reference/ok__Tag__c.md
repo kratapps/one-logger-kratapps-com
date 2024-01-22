@@ -1,8 +1,8 @@
 # Tag Reference
 
-Type: Custom SObject
+**Type**: Custom SObject
 
-API Name: `ok__Tag__c`
+**API Name**: `ok__Tag__c`
 
 Add tags to your logs.
 
