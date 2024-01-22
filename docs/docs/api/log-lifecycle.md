@@ -24,4 +24,4 @@ The log lifecycle includes following steps:
 Salesforce is not optimized to store a large volume of data, such as logs.
 Consider scheduling a log cleaner to prune old logs and connecting an external application like Splunk to persist and conduct further analysis.
 
-## Consume log records (optional).
+## Consume log records (optional)

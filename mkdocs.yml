@@ -95,8 +95,8 @@ nav:
     - External Log Import: reference/ok__External_Log_Import__mdt.md
     - External Log Field Mapping: reference/ok__External_Log_Field_Mapping__mdt.md
   - Apex Reference:
-    - Logger: reference/Logger.md
     - Log: reference/Log.md
+    - Logger: reference/Logger.md
     - InvocableLog: reference/InvocableLog.md
     - InvocableErrorLogger: reference/InvocableErrorLogger.md
     - PermissionManager: reference/PermissionManager.md
