@@ -20,7 +20,7 @@ theme:
     # - header.autohide
     # - navigation.expand
     - navigation.footer
-    - navigation.indexes
+    # - navigation.indexes
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
@@ -66,7 +66,7 @@ nav:
       - Setup: docs/getting-started/setup.md
       - Best Practices: docs/getting-started/best-practices.md
     - Logger App:
-      - Logger App: docs/app/README.md
+      - Logger App: docs/app/index.md
       - Logs Explorer: docs/app/logs-explorer.md
       - Logs Monitor: docs/app/logs-monitor.md
       - Logs Table: docs/app/logs-table.md

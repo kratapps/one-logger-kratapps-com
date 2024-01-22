@@ -4,9 +4,9 @@ Type: Apex Class
 
 API Name: `ok.Log`
 
-Data class used for building the log event.
+Data class used for constructing the log event.
 
-Note that this class is completely different from the `ok__Log__c` custom sobject.
+This class is used to build the `ok__Log_Event__e`, which is then saved to the database as the custom sObject `ok__Log__c`.
 
 ## Methods
 

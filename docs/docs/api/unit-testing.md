@@ -1,5 +1,9 @@
 # Unit Testing
 
+This page documents how to control the logging execution in your unit tests.
+
+See [Logger Test Util Reference](../../reference/LoggerTestUtil.md).
+
 ## Enable system debug
 
 System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
@@ -26,7 +30,7 @@ Disable the `ErrorLoggedException` on a per-test method basis.
 ```apex
 @IsTest
 static void myTest() {
-    LoggerTestUtil.disableErrorLoggedException();
+    ok.LoggerTestUtil.disableErrorLoggedException();
     // Error logs will not throw the ErrorLoggedException in this test method.
     logger.error().log('test');
 }
@@ -40,7 +44,7 @@ private class MyTestClass {
     private static ok.Logger logger = ok.Logger.getLogger(MyTestClass.class);
 
     static {
-        LoggerTestUtil.disableErrorLoggedException();
+        ok.LoggerTestUtil.disableErrorLoggedException();
     }
 
     @IsTest
