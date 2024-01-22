@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../flow-logging/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../plugin-development/">
+        <link rel="next" href="../flow-logging/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Unit Testing - One Logger</title>
+        <title>Log Lifecycle - One Logger</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unit-testing" class="md-skip">
+        <a href="#log-lifecycle" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unit Testing
+              Log Lifecycle
             
           </span>
         </div>
@@ -751,10 +751,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../log-lifecycle/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Log Lifecycle
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -763,6 +783,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-log-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build log data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#register-log-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register log event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-log-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish log events
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscribe-to-log-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to log events
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-logs-in-an-external-app-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Store logs in an external app (optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consume-log-records-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consume log records (optional).
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -793,30 +887,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Unit Testing
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../unit-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -825,44 +899,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#enable-system-debug" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enable system debug
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fail-tests-automatically-on-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fail tests automatically on error
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1569,47 +1605,25 @@
                   
 
 
-<h1 id="unit-testing">Unit Testing</h1>
-<p>This page documents how to control the logging execution in your unit tests.</p>
-<p>See <a href="../../../reference/LoggerTestUtil/">Logger Test Util Reference</a>.</p>
-<h2 id="enable-system-debug">Enable system debug</h2>
-<p>System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
-You can enable system debug in unit tests explicitly using <code>LoggerTestUtil.enableDebugLogs();</code>.</p>
-<h2 id="fail-tests-automatically-on-error">Fail tests automatically on error</h2>
-<p>When an error is logged from within a unit test, an <code>ErrorLoggedException</code> exception is thrown by default to fail the test.
-Sometimes, it is expected in the test for an error to be logged.
-In that case, you can disable this behavior using <code>LoggerTestUtil.disableErrorLoggedException();</code>.</p>
-<p>In the following example, the test method will fail and ends the test:</p>
-<pre><code class="language-apex">@IsTest
-static void myTest() {
-    // Next line will throw the ErrorLoggedException.
-    logger.error().log('test');
-}
+<h1 id="log-lifecycle">Log Lifecycle</h1>
+<p>A log can have several forms throughout the lifecycle:</p>
+<ul>
+<li>Log data (<code>ok.Log</code> apex class) - See <a href="../../../reference/Log/">Log Reference</a>.</li>
+<li>Log event (<code>ok__Log_Event__e</code> platform event) - See <a href="../../../reference/ok__Log_Event__e/">Log Event Reference</a>.</li>
+<li>Log record (<code>ok__Log_c</code> custom object) - See <a href="../../../reference/ok__Log__c/">Log Reference</a>.</li>
+</ul>
+<p>The log lifecycle includes following steps:</p>
+<h2 id="build-log-data">Build log data</h2>
+<h2 id="register-log-event">Register log event</h2>
+<h2 id="publish-log-events">Publish log events</h2>
+<h2 id="subscribe-to-log-events">Subscribe to log events</h2>
+<pre><code>- Create log records.
+- Plugins are executed (optional).
 </code></pre>
-<p>Disable the <code>ErrorLoggedException</code> on a per-test method basis.</p>
-<pre><code class="language-apex">@IsTest
-static void myTest() {
-    ok.LoggerTestUtil.disableErrorLoggedException();
-    // Error logs will not throw the ErrorLoggedException in this test method.
-    logger.error().log('test');
-}
-</code></pre>
-<p>Disable <code>ErrorLoggedException</code> on a per-test class basis.</p>
-<pre><code class="language-apex">@IsTest
-private class MyTestClass {
-    private static ok.Logger logger = ok.Logger.getLogger(MyTestClass.class);
-
-    static {
-        ok.LoggerTestUtil.disableErrorLoggedException();
-    }
-
-    @IsTest
-    static void myTest() {
-        // Error logs will not throw the ErrorLoggedException in this test class.
-        logger.error().log('test');
-    }
-}
-</code></pre>
+<h2 id="store-logs-in-an-external-app-optional">Store logs in an external app (optional)</h2>
+<p>Salesforce is not optimized to store a large volume of data, such as logs.
+Consider scheduling a log cleaner to prune old logs and connecting an external application like Splunk to persist and conduct further analysis.</p>
+<h2 id="consume-log-records-optional">Consume log records (optional).</h2>
 
 
 
@@ -1645,7 +1659,7 @@ private class MyTestClass {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../flow-logging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flow Logging">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logger API">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1655,20 +1669,20 @@ private class MyTestClass {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Flow Logging
+                Logger API
               </div>
             </div>
           </a>
         
         
           
-          <a href="../plugin-development/" class="md-footer__link md-footer__link--next" aria-label="Next: Plugin Development">
+          <a href="../flow-logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Flow Logging">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Plugin Development
+                Flow Logging
               </div>
             </div>
             <div class="md-footer__button md-icon">
