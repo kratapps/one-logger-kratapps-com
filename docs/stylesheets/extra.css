@@ -40,8 +40,8 @@ th, td {
 
 .md-content img {
     padding: 1rem;
-    border-radius: 8px; /* Set the border-radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Set the box shadow properties */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .md-typeset code.hljs {
