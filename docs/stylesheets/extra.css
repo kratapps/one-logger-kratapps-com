@@ -38,6 +38,12 @@ th, td {
     background-color: var(--color-secondary);
 }
 
+.md-content img {
+    padding: 1rem;
+    border-radius: 8px; /* Set the border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Set the box shadow properties */
+}
+
 .md-typeset code.hljs {
     background-color: #2b2b2b;
     color: #bababa;

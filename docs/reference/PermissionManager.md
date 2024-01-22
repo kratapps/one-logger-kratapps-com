@@ -4,6 +4,8 @@
 
 **API Name**: `ok.PermissionManager`
 
+Manage permission sets and license assignments programmatically.
+
 ## Static Methods
 
 | Method                  | Params           | Returns | Description                                                                                                |

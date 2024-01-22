@@ -5,8 +5,8 @@ plugins:
       separator: '[\s\u200b\-\.,!=\[\]()"`/]+'
 theme:
   name: material
-  logo: assets/logo_kratapps.svg
-  favicon: assets/favicon.ico
+  logo: images/logo_kratapps.svg
+  favicon: images/favicon.ico
   features:
   #  - index.pages
     - announce.dismiss
@@ -96,7 +96,9 @@ nav:
     - Logger: reference/Logger.md
     - Log: reference/Log.md
     - InvocableLog: reference/InvocableLog.md
+    - InvocableErrorLogger: reference/InvocableErrorLogger.md
     - PermissionManager: reference/PermissionManager.md
+    - LoggerTestUtil: reference/LoggerTestUtil.md
   - Release Notes:
       - 1.44: release-notes/1.44.md
       - 1.43: release-notes/1.43.md
