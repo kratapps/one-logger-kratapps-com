@@ -100,7 +100,7 @@ nav:
     - PermissionManager: reference/PermissionManager.md
     - LoggerTestUtil: reference/LoggerTestUtil.md
   - Release Notes:
-      - 1.44: release-notes/1.44.md
-      - 1.43: release-notes/1.43.md
+    - 1.44: release-notes/1.44.md
+    - 1.43: release-notes/1.43.md
   - Plugins:
-      - Slack for One Logger: plugins/slack-for-one-logger.md
+    - Slack for One Logger: plugins/slack-for-one-logger.md

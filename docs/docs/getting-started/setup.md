@@ -29,10 +29,11 @@
     - Logger Read Only - grants read access to logs and the `One Logger` app.
     - Logger Create Logs - grants permission to publish logs.
 
-4. **Schedule Logs Cleaner**  
-   This step is optional and allows you to automatically delete logs after a configured time.
+    Use [Permission Manager app](../app/permission-manager.md) to review user permissions.
 
-5. **Activate Log Record Page**  
+    Use [Permission Manager API](../../reference/PermissionManager.md) to programmatically assign permission sets and licenses.
+
+4. **Activate Log Record Page**  
    Activate the packaged record pages as the org default on the following objects:
 
     - `ok__Log__c`
@@ -41,6 +42,11 @@
     - `ok__Log_Tag__c`
     - `ok__Log_Search__c`
 
-    When activated, you will enable all the features available through the record pages across all apps, not only in the One Logger app.
+    When activated, you will enable all the features available through the record pages across all apps, not only in the `One Logger` app.
 
-6. **Check Logger Admin Console page**
+5. **Check Logger Admin Console page**
+   See [Admin Console](../app/admin-console.md) documentation for details.
+
+6. **Schedule Logs Cleaner (optional)**  
+   This step is optional and allows you to automatically delete logs after a configured time.
+   See [Logs Cleaner](../app/logs-cleaner.md) documentation for details.
