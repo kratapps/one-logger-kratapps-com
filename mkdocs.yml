@@ -61,6 +61,7 @@ extra_javascript:
   - scripts/highlight.min.js
   - scripts/highlightConfig.js
 nav:
+  - Home: index.md
   - Docs:
     - Getting Stared:
       - Setup: docs/getting-started/setup.md
@@ -75,6 +76,7 @@ nav:
       - Permission Manager: docs/app/permission-manager.md
     - Logger API:
       - Logger API: docs/api/index.md
+      - Log Lifecycle: docs/api/log-lifecycle.md
       - Flow Logging: docs/api/flow-logging.md
       - Unit Testing: docs/api/unit-testing.md
       - Plugin Development: docs/api/plugin-development.md

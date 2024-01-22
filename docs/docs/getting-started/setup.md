@@ -44,7 +44,7 @@
 
     When activated, you will enable all the features available through the record pages across all apps, not only in the `One Logger` app.
 
-5. **Check Logger Admin Console page**
+5. **Check Logger Admin Console page**  
    See [Admin Console](../app/admin-console.md) documentation for details.
 
 6. **Schedule Logs Cleaner (optional)**  
