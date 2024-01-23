@@ -54,6 +54,11 @@ theme:
     code: Roboto Mono
 extra:
   generator: false
+  social:
+    - icon: fontawesome/regular/envelope
+      link: mailto:sales@kratapps.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/kratapps
 extra_css:
   - stylesheets/extra.css
   - stylesheets/hljs-kratapps.css
