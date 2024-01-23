@@ -4,6 +4,19 @@ Don't publish logs in every method; it is recommended to publish only at the top
 The best practice is to wrap your code at the top-level Apex in a try-catch-finally block to log unexpected errors
 and publish all the registered log events.
 
+## Examples: Top-level Apex
+
+-   Apex triggers.
+-   Methods annotated with `@AuraEnable`.
+-   Methods annotated with `@Future`.
+-   Queueable `execute` methods.
+-   Schedulable `execute` methods.
+-   Batchable `execute`, `start` and `finish` methods.
+-   REST resource annotated methods, e.g. `@HttpGet`, `@HttpPost`.
+-   Inbound email handler `handleInboundEmail` methods.
+
+## Examples: try-catch-finally
+
 Example of the try-catch-finally publish pattern.
 
 ```apex
@@ -46,17 +59,7 @@ public Boolean grantAccess(Id userId) {
     if (granted) {
         logger.info().linkSObject(userId).log('Permission granted.');
     }
+    // There should be no try-catch-finally blocks and no publishing in this method.
     return granted;
 }
 ```
-
-**Top-level Apex Examples:**
-
--   Apex triggers.
--   Methods annotated with `@AuraEnable`.
--   Methods annotated with `@Future`.
--   Queueable `execute` methods.
--   Schedulable `execute` methods.
--   Batchable `execute`, `start` and `finish` methods.
--   REST resource annotated methods, e.g. `@HttpGet`, `@HttpPost`.
--   Inbound email handler `handleInboundEmail` methods.
