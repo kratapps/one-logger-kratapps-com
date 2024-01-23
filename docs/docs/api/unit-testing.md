@@ -61,6 +61,8 @@ Publishing is disabled by default in unit tests to improve performance.
 If you need to assert expected logs, you can directly work with the registered events.
 Use the API to retrieve the last error event or all registered events, no need to query logs.
 
+Work with last error log event:
+
 ```apex
 @IsTest
 static void lastErrorLogEventIsNullWhenNotLogged() {
@@ -70,9 +72,7 @@ static void lastErrorLogEventIsNullWhenNotLogged() {
     ok__Log_Event__e lastErrorLogEvent = ok.LoggerTestUtil.getLastErrorLogEvent();
     Assert.isNull(lastErrorLogEvent, 'No error log is expected.');
 }
-```
 
-```apex
 @IsTest
 static void lastErrorLogEventIsNotNullWhenLogged() {
     // Disable ErrorLoggedException.
@@ -84,6 +84,8 @@ static void lastErrorLogEventIsNotNullWhenLogged() {
     Assert.areEqual('Hello Test.', lastErrorLogEvent.ok__Message__c, 'Error log is expected.');
 }
 ```
+
+Work with any log event:
 
 ```apex
 @IsTest
