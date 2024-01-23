@@ -1,16 +1,5 @@
 ### Log creation
 
-Initialize a One Logger instance.
-
-```apex
-// apex class logger
-private static final ok.Logger logger = ok.Logger.getLogger(AccountTriggerHandler.class);
-// or trigger logger
-final ok.Logger logger = ok.Logger.getTriggerLogger();
-// or anonymous apex logger
-final ok.Logger logger = ok.Logger.getAnonymousBlockLogger();
-```
-
 Use `error`, `warn`, `info`, `debug`, `fine`, `finer` or `finest` method on Logger instance to create a
 [log](https://kratapps.com/one-logger/latest/reference/Log.cls).
 
@@ -38,34 +27,6 @@ if (resp.getStatusCode() == 200) {
 // log rest request
 logger.info().addRestRequest(RestContext.request).log('Inbound REST request.');
 ```
-
-### Log registration
-
-Call `log` method to register the log.
-During the registration a log event is build and printed into the console.
-You should treat a log object as read-only once you register the log.
-
-### Publish logs
-
-When `publish` method is called, log events are published and sObjects are inserted.
-
-```apex
-ok.Logger.publish();
-```
-
-You don't need to publish logs in every method, publishing only at the top-level apex code is recommended.
-Best practice is to wrap your code at the
-top-level apex in a `try-catch` block and use `finally` block to publish events.
-
-Top-level apex code examples:
-
--   Apex trigger
--   Controller method with `@AuraEnable` annotation
--   Method with `@Future` annotation
--   Execute method of a queueable class
--   Execute method of a schedulable class
--   Execute, start and finish methods of a batchable class
--   Apex REST resource methods
 
 ### Generic Payload
 
