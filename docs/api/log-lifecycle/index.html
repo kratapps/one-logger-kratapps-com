@@ -12,7 +12,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../flow-logging/">
+        <link rel="next" href="../top-level-apex/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -800,18 +800,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-log-data" class="md-nav__link">
+  <a href="#logger-initialization" class="md-nav__link">
     <span class="md-ellipsis">
-      Build log data
+      Logger initialization
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#register-log-event" class="md-nav__link">
+  <a href="#build-log-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Register log event
+      Build Log Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#register-logs-for-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register Logs for Publishing
     </span>
   </a>
   
@@ -820,25 +829,34 @@
         <li class="md-nav__item">
   <a href="#publish-log-events" class="md-nav__link">
     <span class="md-ellipsis">
-      Publish log events
+      Publish Log Events
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#subscribe-to-log-events" class="md-nav__link">
+  <a href="#log-records-creation" class="md-nav__link">
     <span class="md-ellipsis">
-      Subscribe to log events
+      Log Records Creation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#store-logs-in-an-external-app-optional" class="md-nav__link">
+  <a href="#plugins-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Store logs in an external app (optional)
+      Plugins (optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persist-logs-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persist Logs (optional)
     </span>
   </a>
   
@@ -847,7 +865,7 @@
         <li class="md-nav__item">
   <a href="#consume-log-records-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Consume log records (optional)
+      Consume Log Records (optional)
     </span>
   </a>
   
@@ -857,6 +875,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../top-level-apex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top Level Apex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unit Testing
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -890,11 +950,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/" class="md-nav__link">
+      <a href="../lwc-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Unit Testing
+    LWC Logging
   </span>
   
 
@@ -1612,18 +1672,77 @@
 <li>Log event (<code>ok__Log_Event__e</code> platform event) - See <a href="../../../reference/ok__Log_Event__e/">Log Event Reference</a>.</li>
 <li>Log record (<code>ok__Log_c</code> custom object) - See <a href="../../../reference/ok__Log__c/">Log Reference</a>.</li>
 </ul>
-<p>The log lifecycle includes following steps:</p>
-<h2 id="build-log-data">Build log data</h2>
-<h2 id="register-log-event">Register log event</h2>
-<h2 id="publish-log-events">Publish log events</h2>
-<h2 id="subscribe-to-log-events">Subscribe to log events</h2>
-<pre><code>- Create log records.
-- Plugins are executed (optional).
+<p>The log lifecycle includes following stages:</p>
+<h2 id="logger-initialization">Logger initialization</h2>
+<p><strong>Apex class logger</strong></p>
+<p>The logger in an apex class should be initialized using <code>getLogger</code> and with the correct type.
+Add the <code>static</code> modifier to enable logging from static methods.</p>
+<blockquote>
+<p>⚠ The use of an incorrect type will break information about the method name, line number, etc.</p>
+</blockquote>
+<pre><code class="language-apex">public class AccountService {
+    private static ok.Logger logger = ok.Logger.getLogger(AccountService.class);
+}
 </code></pre>
-<h2 id="store-logs-in-an-external-app-optional">Store logs in an external app (optional)</h2>
+<p><strong>Apex trigger logger</strong></p>
+<p>Similar to the Apex class, the trigger logger will be initialized simply with <code>getTriggerLogger</code>.</p>
+<blockquote>
+<p>⚠ A trigger code is a <a href="../top-level-apex/">top-level Apex</a>, and its code should be wrapped in a try-catch-finally block with error logging and publishing.
+The exception should be rethrown to roll back the transaction.</p>
+</blockquote>
+<pre><code class="language-apex">trigger AccountTrigger on Account(before insert) {
+    ok.Logger logger = ok.Logger.getTriggerLogger();
+    try {
+        Domain.triggerHandler(Accounts.class);
+    } catch (Exception e) {
+        logger.error().addException(e).log('Unexpected error in trigger.');
+        throw e;
+    } finally {
+        ok.Logger.publish();
+    }
+}
+</code></pre>
+<p><strong>Anonymous apex logger</strong></p>
+<p>If you have some automated Apex scripts, you can also log from there using the anonymous block logger.</p>
+<pre><code class="language-apex">ok.Logger logger = ok.Logger.getAnonymousBlockLogger();
+</code></pre>
+<p><strong>Flow logger</strong></p>
+<p>There's no need to initialize a flow logger, see <a href="../flow-logging/">Flow Logging</a>.</p>
+<h2 id="build-log-data">Build Log Data</h2>
+<p>TODO</p>
+<p>Visit the <a href="../log-examples/">Log Examples</a> page for more examples.</p>
+<p>See <a href="../../../reference/Log/">Log</a> for all available methods.</p>
+<h2 id="register-logs-for-publishing">Register Logs for Publishing</h2>
+<p>Call <code>.log(message)</code> method to register the log.
+During registration, a <a href="../../../reference/ok__Log_Event__e/">log event</a> is constructed and printed to the console if system debugging is enabled.
+You should treat the log object as read-only once you register it.</p>
+<pre><code class="language-apex">logger.error().log('Hello Message.');
+</code></pre>
+<p><strong>LWC logger</strong></p>
+<p>See <a href="../lwc-logging/">LWC Logging</a>.</p>
+<h2 id="publish-log-events">Publish Log Events</h2>
+<p>Publish logs by calling <code>publish</code>.
+This method will publish the <code>ok__Log_Event__e</code> immediately.</p>
+<blockquote>
+<p>⚠ Publish should be called only at the <a href="../top-level-apex/">top-level Apex</a> to bulkify the DML operation.</p>
+</blockquote>
+<pre><code class="language-apex">ok.Logger.publish();
+</code></pre>
+<h2 id="log-records-creation">Log Records Creation</h2>
+<p>Once the <a href="../../../reference/ok__Log_Event__e/"><code>ok__Log_Event__e</code></a> events are published, they are consumed by a platform event trigger
+and saved in the database as <a href="../../../reference/ok__Log__c/"><code>ok__Log__c</code></a> records.</p>
+<blockquote>
+<p>⚠ Avoid triggers on the <code>ok__Log__c</code> object, as such triggers can cause a loss of the logs.
+Instead, develop a custom plugin.</p>
+</blockquote>
+<h2 id="plugins-optional">Plugins (optional)</h2>
+<p>Plugins gives you a flexibility to consume and process <code>ok__Log__Event__e</code> events in real-time.</p>
+<p>See <a href="../plugin-development/">Plugin Development</a>.</p>
+<h2 id="persist-logs-optional">Persist Logs (optional)</h2>
 <p>Salesforce is not optimized to store a large volume of data, such as logs.
 Consider scheduling a log cleaner to prune old logs and connecting an external application like Splunk to persist and conduct further analysis.</p>
-<h2 id="consume-log-records-optional">Consume log records (optional)</h2>
+<h2 id="consume-log-records-optional">Consume Log Records (optional)</h2>
+<p>Coming soon!</p>
 
 
 
@@ -1676,13 +1795,13 @@ Consider scheduling a log cleaner to prune old logs and connecting an external a
         
         
           
-          <a href="../flow-logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Flow Logging">
+          <a href="../top-level-apex/" class="md-footer__link md-footer__link--next" aria-label="Next: Top Level Apex">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Flow Logging
+                Top Level Apex
               </div>
             </div>
             <div class="md-footer__button md-icon">

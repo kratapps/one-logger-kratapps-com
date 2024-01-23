@@ -769,11 +769,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/api/flow-logging/" class="md-nav__link">
+      <a href="../../docs/api/top-level-apex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Flow Logging
+    Top Level Apex
   </span>
   
 
@@ -795,6 +795,48 @@
   
   <span class="md-ellipsis">
     Unit Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/api/flow-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/api/lwc-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LWC Logging
   </span>
   
 
@@ -1585,6 +1627,18 @@
 <td>Disable <code>ErrorLoggedException</code> when testing <code>logger.error()</code>.</td>
 </tr>
 <tr>
+<td>enableEventPublishing</td>
+<td></td>
+<td></td>
+<td>Enable <code>ok__Log_Event__e</code> to be published using <code>ok.Logger.publish()</code> in unit tests.</td>
+</tr>
+<tr>
+<td>enableEventPublishing</td>
+<td>Boolean disabled</td>
+<td></td>
+<td>Enable <code>ok__Log_Event__e</code> to be published using <code>ok.Logger.publish()</code> in unit tests.</td>
+</tr>
+<tr>
 <td>enableDebugLogs</td>
 <td></td>
 <td></td>
@@ -1592,7 +1646,7 @@
 </tr>
 <tr>
 <td>enableDebugLogs</td>
-<td>Boolean disabled</td>
+<td>Boolean enabled</td>
 <td></td>
 <td>Enable system debug (Apex Log) in unit tests.</td>
 </tr>
@@ -1600,7 +1654,13 @@
 <td>getLastErrorLogEvent</td>
 <td></td>
 <td>ok__Log_Event__e</td>
-<td>Return the log event created by the last execution of <code>logger.error()</code>.</td>
+<td>Return the log event registered by the last execution of <code>logger.error()</code>.</td>
+</tr>
+<tr>
+<td>getLogEvents</td>
+<td></td>
+<td>List&lt;ok__Log_Event__e&gt;</td>
+<td>Return all the registered log events.</td>
 </tr>
 </tbody>
 </table>

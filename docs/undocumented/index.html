@@ -763,11 +763,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/flow-logging/" class="md-nav__link">
+      <a href="../api/top-level-apex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Flow Logging
+    Top Level Apex
   </span>
   
 
@@ -789,6 +789,48 @@
   
   <span class="md-ellipsis">
     Unit Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/flow-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flow Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/lwc-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LWC Logging
   </span>
   
 
@@ -1502,14 +1544,6 @@
   <h1>Undocumented</h1>
 
 <h3 id="log-creation">Log creation</h3>
-<p>Initialize a One Logger instance.</p>
-<pre><code class="language-apex">// apex class logger
-private static final ok.Logger logger = ok.Logger.getLogger(AccountTriggerHandler.class);
-// or trigger logger
-final ok.Logger logger = ok.Logger.getTriggerLogger();
-// or anonymous apex logger
-final ok.Logger logger = ok.Logger.getAnonymousBlockLogger();
-</code></pre>
 <p>Use <code>error</code>, <code>warn</code>, <code>info</code>, <code>debug</code>, <code>fine</code>, <code>finer</code> or <code>finest</code> method on Logger instance to create a
 <a href="https://kratapps.com/one-logger/latest/reference/Log.cls">log</a>.</p>
 <p>Optionally chain builder methods to provide more details in the log,
@@ -1534,27 +1568,6 @@ if (resp.getStatusCode() == 200) {
 // log rest request
 logger.info().addRestRequest(RestContext.request).log('Inbound REST request.');
 </code></pre>
-<h3 id="log-registration">Log registration</h3>
-<p>Call <code>log</code> method to register the log.
-During the registration a log event is build and printed into the console.
-You should treat a log object as read-only once you register the log.</p>
-<h3 id="publish-logs">Publish logs</h3>
-<p>When <code>publish</code> method is called, log events are published and sObjects are inserted.</p>
-<pre><code class="language-apex">ok.Logger.publish();
-</code></pre>
-<p>You don't need to publish logs in every method, publishing only at the top-level apex code is recommended.
-Best practice is to wrap your code at the
-top-level apex in a <code>try-catch</code> block and use <code>finally</code> block to publish events.</p>
-<p>Top-level apex code examples:</p>
-<ul>
-<li>Apex trigger</li>
-<li>Controller method with <code>@AuraEnable</code> annotation</li>
-<li>Method with <code>@Future</code> annotation</li>
-<li>Execute method of a queueable class</li>
-<li>Execute method of a schedulable class</li>
-<li>Execute, start and finish methods of a batchable class</li>
-<li>Apex REST resource methods</li>
-</ul>
 <h3 id="generic-payload">Generic Payload</h3>
 <p>A log contains multiple fields for storing data, and it includes the ok__Payload__c field specifically designated for saving a generic payload.</p>
 <ul>
