@@ -119,6 +119,7 @@ static void logsAreInsertedWhenPublishingIsEnabled() {
     // Deliver events.
     ok.Logger.publish();
     Test.getEventBus().deliver();
+    // Log records are created when publishing is enabled.
     List<ok__Log__c> logs = [SELECT Id FROM ok__Log__c];
     Assert.areEqual(1, logs.size(), 'Incorrect number of logs.');
 }
