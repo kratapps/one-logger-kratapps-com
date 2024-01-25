@@ -8,6 +8,8 @@ module.exports = {
         {
             files: ['*.md', '*.markdown'],
             options: {
+                proseWrap: 'always',
+                printWidth: 80,
                 tabWidth: 4
             }
         },
