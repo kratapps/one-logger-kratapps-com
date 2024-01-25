@@ -94,11 +94,16 @@ static void logEventsAreInCorrectOrder() {
     logger.info().log('INFO');
     // Log FINE.
     logger.fine().log('FINE');
-    // Last ERROR log event is null.
+
+    // Get all events.
     List<ok__Log_Event__e> logEvents = ok.LoggerTestUtil.getLogEvents();
     Assert.areEqual(2, logEvents.size(), 'Log events expected.');
     Assert.areEqual('INFO', logEvents.get(0).ok__Log_Level__c, 'Incorrect log events order.');
     Assert.areEqual('FINE', logEvents.get(1).ok__Log_Level__c, 'Incorrect log events order.');
+
+    // Get all INFO events.
+    List<ok__Log_Event__e> infoEvents = ok.LoggerTestUtil.getLogEvents(ok.LogLevel.INFO);
+    Assert.areEqual(1, infoEvents.size(), 'INFO event expected.');
 }
 ```
 
