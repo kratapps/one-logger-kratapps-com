@@ -899,11 +899,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../logging-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../log-database-errors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Log Database Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../async-job-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Async Job Logging
   </span>
   
 
@@ -967,6 +1009,27 @@
   
   <span class="md-ellipsis">
     Unit Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permission-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permission Manager
   </span>
   
 
@@ -1769,8 +1832,8 @@ line number, etc.</p>
 <code>getTriggerLogger</code>.</p>
 <blockquote>
 <p>⚠ A trigger code is a <a href="../top-level-apex/">top-level Apex</a>, and its code should
-be wrapped in a try-catch-finally block with error logging and publishing. The
-exception should be rethrown to roll back the transaction.</p>
+be wrapped in a try-catch-finally-publish block with error logging and
+publishing. The exception should be rethrown to roll back the transaction.</p>
 </blockquote>
 <pre><code class="language-apex">trigger AccountTrigger on Account(before insert) {
     ok.Logger logger = ok.Logger.getTriggerLogger();
@@ -1820,14 +1883,17 @@ methods in the <a href="../../../reference/Log/">ok.Log</a> reference.</p>
         Id pilotId = UserInfo.getUserId();
         Boolean isAuthorized = isHyperspaceJumpAuthorized(pilotId);
         if (!isAuthorized) {
+            // WARNING log.
             logger.warn().linkSObject(spaceship).linkSObject2(pilotId).log('Pilot is not authorized.');
             return false;
         }
-        logger.info().linkSObject(spaceship).log('Hyperspace jump is ready.');
+        // INFO log.
+        logger.info().addPayloadJson(spaceship.getEngineStatus()).log('Hyperspace jump is ready.');
         return true;
     }
 }
 </code></pre>
+<p>See more <a href="../logging-examples/">Logging Examples</a>.</p>
 <h2 id="register-logs-for-publishing">Register Logs for Publishing</h2>
 <p>Once you include all the information in the log, you can call <code>.log(message)</code>
 method to register the log. During registration, a

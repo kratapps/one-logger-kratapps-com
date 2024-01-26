@@ -783,11 +783,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../docs/api/logging-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../docs/api/log-database-errors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Log Database Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/api/async-job-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Async Job Logging
   </span>
   
 
@@ -851,6 +893,27 @@
   
   <span class="md-ellipsis">
     Unit Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docs/api/permission-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permission Manager
   </span>
   
 
@@ -1367,9 +1430,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#payload" class="md-nav__link">
+  <a href="#add-payload" class="md-nav__link">
     <span class="md-ellipsis">
-      Payload
+      Add Payload
     </span>
   </a>
   
@@ -1726,48 +1789,6 @@ database as the custom sObject <code>ok__Log__c</code>.</p>
 <td>Registers the log. Log will be printed to console and prepared for publishing.</td>
 </tr>
 <tr>
-<td>hideSecrets</td>
-<td>Set&lt;String&gt; secrets</td>
-<td>ok.Log</td>
-<td>Removes secrets from logs.</td>
-</tr>
-<tr>
-<td>hideSecret</td>
-<td>String secret</td>
-<td>ok.Log</td>
-<td>Removes secret from logs.</td>
-</tr>
-<tr>
-<td>addPayload</td>
-<td>Object payload</td>
-<td>ok.Log</td>
-<td>Add data. String.valueOf will be used to stringify the object.</td>
-</tr>
-<tr>
-<td>addPayloadJson</td>
-<td>Object payload</td>
-<td>ok.Log</td>
-<td>Add data. JSON.serialize will be used to serialize the object.</td>
-</tr>
-<tr>
-<td>addException</td>
-<td>Exception e</td>
-<td>ok.Log</td>
-<td>Includes exception data, exception message and stack trace.</td>
-</tr>
-<tr>
-<td>linkSObject</td>
-<td>Id sObjectId</td>
-<td>ok.Log</td>
-<td>Includes SObject ID and Type in the log.</td>
-</tr>
-<tr>
-<td>linkSObject</td>
-<td>SObject record</td>
-<td>ok.Log</td>
-<td>Includes SObject ID, Type and serialized SObject.</td>
-</tr>
-<tr>
 <td>addEmail</td>
 <td>Messaging.Email email</td>
 <td>ok.Log</td>
@@ -1780,8 +1801,14 @@ database as the custom sObject <code>ok__Log__c</code>.</p>
 <td>Includes outbound email data.</td>
 </tr>
 <tr>
+<td>addException</td>
+<td>Exception e</td>
+<td>ok.Log</td>
+<td>Includes exception data, exception message and stack trace.</td>
+</tr>
+<tr>
 <td>addHttpCallout</td>
-<td>HttpRequest req, HttpResponse</td>
+<td>HttpRequest req, HttpResponse resp</td>
 <td>ok.Log</td>
 <td>Includes HTTP request and response data.</td>
 </tr>
@@ -1793,7 +1820,7 @@ database as the custom sObject <code>ok__Log__c</code>.</p>
 </tr>
 <tr>
 <td>addHttpResponse</td>
-<td>HttpResponse res</td>
+<td>HttpResponse resp</td>
 <td>ok.Log</td>
 <td>Includes HTTP response data.</td>
 </tr>
@@ -1802,6 +1829,18 @@ database as the custom sObject <code>ok__Log__c</code>.</p>
 <td>Messaging.InboundEmail, Messaging.InboundEnvelope</td>
 <td>ok.Log</td>
 <td>Includes inbound email data.</td>
+</tr>
+<tr>
+<td>addPayload</td>
+<td>Object payload</td>
+<td>ok.Log</td>
+<td>Add data. String.valueOf will be used to stringify the object.</td>
+</tr>
+<tr>
+<td>addPayloadJson</td>
+<td>Object payload</td>
+<td>ok.Log</td>
+<td>Add data. JSON.serialize will be used to serialize the object.</td>
 </tr>
 <tr>
 <td>addRestRequest</td>
@@ -1823,9 +1862,15 @@ database as the custom sObject <code>ok__Log__c</code>.</p>
 </tr>
 <tr>
 <td>addRestResponse</td>
-<td>RestResponse res, Object responseBody</td>
+<td>RestResponse resp, Object responseBody</td>
 <td>ok.Log</td>
 <td>Includes REST response data. Response body is either the return value of the method or RestContext.response.</td>
+</tr>
+<tr>
+<td>addTag</td>
+<td>String tagName</td>
+<td>ok.Log</td>
+<td>Add tag to a log.</td>
 </tr>
 <tr>
 <td>addTags</td>
@@ -1834,17 +1879,35 @@ database as the custom sObject <code>ok__Log__c</code>.</p>
 <td>Add tags to a log.</td>
 </tr>
 <tr>
-<td>addTag</td>
-<td>String tagName</td>
+<td>hideSecret</td>
+<td>String secret</td>
 <td>ok.Log</td>
-<td>Add tag to a log.</td>
+<td>Removes secret from logs.</td>
+</tr>
+<tr>
+<td>hideSecrets</td>
+<td>Set&lt;String&gt; secrets</td>
+<td>ok.Log</td>
+<td>Removes secrets from logs.</td>
+</tr>
+<tr>
+<td>linkSObject</td>
+<td>Id sObjectId</td>
+<td>ok.Log</td>
+<td>Includes SObject ID and Type in the log.</td>
+</tr>
+<tr>
+<td>linkSObject</td>
+<td>SObject record</td>
+<td>ok.Log</td>
+<td>Includes SObject ID, Type and serialized SObject.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="specification">Specification</h2>
-<h3 id="payload">Payload</h3>
+<h3 id="add-payload">Add Payload</h3>
 <p>The payload is a universal field designated specifically for storing generic
-data.</p>
+data. See <a href="../../docs/api/logging-examples/#add-payload">Example</a>.</p>
 <p><strong>Methods</strong></p>
 <ul>
 <li><code>.addPayload(Object payload)</code> - The payload value is converted to a string
@@ -1856,24 +1919,6 @@ data.</p>
 <ul>
 <li><code>ok__Payload__c</code> - Text data. JSON in case of <code>addPayloadJson</code>.</li>
 </ul>
-<p><strong>Example</strong></p>
-<pre><code class="language-apex">// String payload example:
-Datetime now = Datetime.now();
-logger.info().addPayload(now).log('String payload.');
-
-// Serialized payload example:
-public class Person {
-    public String firstName;
-    public String lastName;
-
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-}
-Person anakin = new Person('Anakin',  'Skywalker');
-logger.info().addPayloadJson(anakin).log('Apex object serialized.');
-</code></pre>
 
 
 

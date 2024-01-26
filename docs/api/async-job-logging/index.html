@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../log-database-errors/">
       
       
-      <link rel="icon" href="../../images/favicon.ico">
+        <link rel="next" href="../flow-logging/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
-        <title>Undocumented - One Logger</title>
+        <title>Async Job Logging - One Logger</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/hljs-kratapps.css">
+      <link rel="stylesheet" href="../../../stylesheets/hljs-kratapps.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#database-error-logger" class="md-skip">
+        <a href="#async-job-logging" class="md-skip">
           Skip to content
         </a>
       
@@ -86,9 +90,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="One Logger" class="md-header__button md-logo" aria-label="One Logger" data-md-component="logo">
+    <a href="../../.." title="One Logger" class="md-header__button md-logo" aria-label="One Logger" data-md-component="logo">
       
-  <img src="../../images/logo_kratapps.svg" alt="logo">
+  <img src="../../../images/logo_kratapps.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Undocumented
+              Async Job Logging
             
           </span>
         </div>
@@ -193,7 +197,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -208,17 +212,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../getting-started/setup/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../getting-started/setup/" class="md-tabs__link">
           
   
   Docs
@@ -245,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/ok__Log__c/" class="md-tabs__link">
+        <a href="../../../reference/ok__Log__c/" class="md-tabs__link">
           
   
   Reference
@@ -266,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../release-notes/1.45/" class="md-tabs__link">
+        <a href="../../../release-notes/1.45/" class="md-tabs__link">
           
   
   Release Notes
@@ -284,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../plugins/slack-for-one-logger/" class="md-tabs__link">
+        <a href="../../../plugins/slack-for-one-logger/" class="md-tabs__link">
           
   
   Plugins
@@ -319,9 +327,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="One Logger" class="md-nav__button md-logo" aria-label="One Logger" data-md-component="logo">
+    <a href="../../.." title="One Logger" class="md-nav__button md-logo" aria-label="One Logger" data-md-component="logo">
       
-  <img src="../../images/logo_kratapps.svg" alt="logo">
+  <img src="../../../images/logo_kratapps.svg" alt="logo">
 
     </a>
     One Logger
@@ -336,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,8 +361,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -363,12 +373,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -382,7 +392,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Docs
@@ -433,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/setup/" class="md-nav__link">
+      <a href="../../getting-started/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/best-practices/" class="md-nav__link">
+      <a href="../../getting-started/best-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/" class="md-nav__link">
+      <a href="../../app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/logs-explorer/" class="md-nav__link">
+      <a href="../../app/logs-explorer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/logs-monitor/" class="md-nav__link">
+      <a href="../../app/logs-monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/logs-table/" class="md-nav__link">
+      <a href="../../app/logs-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/admin-console/" class="md-nav__link">
+      <a href="../../app/admin-console/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/logs-cleaner/" class="md-nav__link">
+      <a href="../../app/logs-cleaner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app/permission-manager/" class="md-nav__link">
+      <a href="../../app/permission-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,19 +682,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -698,7 +710,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Logger API
@@ -712,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -733,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/log-lifecycle/" class="md-nav__link">
+      <a href="../log-lifecycle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/top-level-apex/" class="md-nav__link">
+      <a href="../top-level-apex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,7 +787,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/log-database-errors/" class="md-nav__link">
+      <a href="../logging-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log-database-errors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,10 +826,89 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Async Job Logging
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Async Job Logging
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logging-from-a-batch-apex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging from a Batch Apex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-from-a-schedulable-apex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging from a Schedulable Apex
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../api/flow-logging/" class="md-nav__link">
+      <a href="../flow-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/lwc-logging/" class="md-nav__link">
+      <a href="../lwc-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -838,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/unit-testing/" class="md-nav__link">
+      <a href="../unit-testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -859,7 +971,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/plugin-development/" class="md-nav__link">
+      <a href="../permission-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permission Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/logger-for-isv/" class="md-nav__link">
+      <a href="../logger-for-isv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pricing/" class="md-nav__link">
+      <a href="../../../pricing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Log__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Log__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Transaction_Log__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Transaction_Log__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Log_Event__e/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Event__e/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Tag__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Tag__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Log_Tag__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Tag__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Log_Search__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Search__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Log_Filter__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__Log_Filter__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1161,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Logger_Settings__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__Logger_Settings__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1182,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__Logger_Hierarchy_Settings__c/" class="md-nav__link">
+      <a href="../../../reference/ok__Logger_Hierarchy_Settings__c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__External_Log_Import__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__External_Log_Import__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1224,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/ok__External_Log_Field_Mapping__mdt/" class="md-nav__link">
+      <a href="../../../reference/ok__External_Log_Field_Mapping__mdt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/Log/" class="md-nav__link">
+      <a href="../../../reference/Log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/Logger/" class="md-nav__link">
+      <a href="../../../reference/Logger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1332,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/InvocableLog/" class="md-nav__link">
+      <a href="../../../reference/InvocableLog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1353,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/InvocableErrorLogger/" class="md-nav__link">
+      <a href="../../../reference/InvocableErrorLogger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/PermissionManager/" class="md-nav__link">
+      <a href="../../../reference/PermissionManager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/LoggerTestUtil/" class="md-nav__link">
+      <a href="../../../reference/LoggerTestUtil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1471,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/1.45/" class="md-nav__link">
+      <a href="../../../release-notes/1.45/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1492,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/1.44/" class="md-nav__link">
+      <a href="../../../release-notes/1.44/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1513,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/1.43/" class="md-nav__link">
+      <a href="../../../release-notes/1.43/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugins/slack-for-one-logger/" class="md-nav__link">
+      <a href="../../../plugins/slack-for-one-logger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,110 +1750,28 @@
                   
 
 
-  <h1>Undocumented</h1>
-
-<pre><code class="language-apex">// log at info
-logger.info().log('Hello Logger!');
-
-// log custom payload data
-logger.info().payload(customData).log('Log with custom payload.');
-
-// log at error with sobject data and with exception
-logger.error().linkSObject(account).addException(e).log('Insert failed.');
-
-// log http request
-HttpResponse resp = new Http().send(req);
-if (resp.getStatusCode() == 200) {
-    logger.info().addHttpRequest(req).addHttpResponse(resp).log('HTTP request success.');
-} else {
-    logger.error().addHttpRequest(req).addHttpResponse(resp).log('HTTP request failed.');
-}
-
-// log rest request
-logger.info().addRestRequest(RestContext.request).log('Inbound REST request.');
-</code></pre>
-<h3 id="database-error-logger">Database Error Logger</h3>
-<p>Create logs at level ERROR from database results. Use the <code>logDatabaseFailures</code>
-method to register logs from failed save results. This method does not publish
-the logs.</p>
-<pre><code class="language-apex">List&lt;Database.SaveResult&gt; saveResults = Database.insert(records, false);
-logger.logDatabaseFailures(saveResults);
-</code></pre>
-<p>Supported collections:</p>
+<h1 id="async-job-logging">Async Job Logging</h1>
+<p>Most of the asynchronous jobs are <a href="../top-level-apex/">top level Apex</a> and should
+implement the try-catch-finally-publish pattern.</p>
+<h2 id="logging-from-a-batch-apex">Logging from a Batch Apex</h2>
+<p>Call <code>ok.Logger.setBatchableContext(context)</code> at the beginning of the <code>start</code>,
+<code>execute</code>, and <code>finish</code> methods to provide the batchable context to the logger.</p>
+<p><a href="../logging-examples/#logging-from-a-batch-apex">See example.</a></p>
+<p><strong>Fields</strong></p>
 <ul>
-<li>List<Database.DeleteResult></li>
-<li>List<Database.LeadConvertResult></li>
-<li>List<Database.MergeResult></li>
-<li>List<Database.SaveResult></li>
-<li>List<Database.UndeleteResult></li>
-<li>List<Database.UpsertResult></li>
+<li><code>ok__Batch_Job_Id__c</code> - Batch job ID.</li>
+<li><code>ok__Batch_Child_Job_Id__c</code> - ID of the current batch job chunk that is
+    being processed.</li>
 </ul>
-<h3 id="anonymous-block-apex-logger">Anonymous Block Apex Logger</h3>
-<p>Use anonymous block logger when logging from anonymous apex scripts.</p>
-<pre><code class="language-apex">final ok.Logger logger = ok.Logger.getAnonymousBlockLogger();
-</code></pre>
-<h3 id="logging-in-batch-apex">Logging in Batch Apex</h3>
-<p>Call <code>ok.Logger.setBatchableContext(ctx)</code> at the beginning of <code>start</code>, <code>execute</code>
-and <code>finish</code> methods to provide the batchable context to logger.</p>
-<p>Log fields populated:</p>
+<h2 id="logging-from-a-schedulable-apex">Logging from a Schedulable Apex</h2>
+<p>Call <code>ok.Logger.setSchedulableContext(context)</code> at the beginning of the
+<code>execute</code> method to provide the schedulable context to the logger.</p>
+<p><a href="../logging-examples/#logging-from-a-schedulable-apex">See example.</a></p>
+<p><strong>Fields</strong></p>
 <ul>
-<li>Batch Job Id</li>
-<li>Batch Child Job Id</li>
+<li><code>ok___Schedulable_Cron_Trigger_Job_Id__c</code> - ID of the CronTrigger scheduled
+    job.</li>
 </ul>
-<h3 id="logging-in-schedulable-apex">Logging in Schedulable Apex</h3>
-<p>Call <code>ok.Logger.setSchedulableContext(ctx)</code> at the beginning of the <code>execute</code>
-method to provide the schedulable context to logger.</p>
-<p>Log fields populated:</p>
-<ul>
-<li>Schedulable Cron Trigger Job Id</li>
-</ul>
-<h3 id="inbound-email-logging">Inbound email logging</h3>
-<p>Log inbound email.</p>
-<pre><code class="language-apex">Messaging.InboundEmail email;
-Messaging.InboundEnvelope envelope;
-logger.info().addInboundEmail(email, envelope).addException(e).log('Outbound emails.');
-</code></pre>
-<p>Log outbound email(s).</p>
-<pre><code class="language-apex">Messaging.Email email;
-logger.info().addEmail(email).addException(e).log('Outbound email.');
-
-List&lt;Messaging.Email&gt; emails;
-logger.info().addEmails(emails).addException(e).log('Outbound emails.');
-</code></pre>
-<h3 id="hide-secrets">Hide Secrets</h3>
-<p>The logging utility offers two methods, <code>hideSecret(String)</code> and
-<code>hideSecrets(List&lt;String&gt;)</code>, which are designed to conceal sensitive information
-within text fields of log records. These methods effectively obfuscate the
-specified secrets, ensuring their confidentiality. By utilizing these methods,
-you can safeguard sensitive data from being exposed in log entries. User's
-access token is automatically added to secrets.</p>
-<pre><code class="language-apex">String secretValue;
-logger.info(secretValue).hideSecret(secret).log('Log with a secret.');
-</code></pre>
-<h3 id="import-external-logs">Import External Logs</h3>
-<p>You can configure external log import to publish One Logger events when logs
-from other loggers are inserted. This can be used to publish logs:</p>
-<ul>
-<li>when other apps/managed packages you don't own are using own log objects</li>
-<li>from your own legacy log object</li>
-</ul>
-<p>Create
-<a href="https://kratapps.com/one-logger/latest/reference/ok__External_Log_Import__mdt">External Log Import</a>
-and
-<a href="https://kratapps.com/one-logger/latest/reference/ok__External_Log_Field_Mapping__mdt">External Log Field Mapping</a>
-Custom Metadata records to configure the import. Add after insert trigger on the
-external log object and call <code>ok.Logger.publishExternalLogs(Trigger.new);</code>.</p>
-<p>Some configurations can be found in the
-<a href="https://kratapps.com/one-logger/plugins/external-logs-for-one-logger/">External Logs for One Logger</a>
-plugin.</p>
-<h3 id="permission-manager">Permission Manager</h3>
-<p>Our API provide simple way to assign licenses or our permission sets.</p>
-<p>Let's say you want to assign the Logger_Create_Logs permission set to every new
-active user. You can call <code>PermissionManager.assignCreateLogsPermSet(userIds)</code>
-to assign it from your user trigger.</p>
-<p>See
-<a href="https://kratapps.com/one-logger/latest/reference/PermissionManager.cls">Permission Manager reference</a>
-for all features.</p>
 
 
 
@@ -1751,6 +1802,44 @@ for all features.</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../log-database-errors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Log Database Errors">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Log Database Errors
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../flow-logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Flow Logging">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Flow Logging
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1793,14 +1882,14 @@ for all features.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
-        <script src="../../scripts/highlight.min.js"></script>
+        <script src="../../../scripts/highlight.min.js"></script>
       
-        <script src="../../scripts/highlightConfig.js"></script>
+        <script src="../../../scripts/highlightConfig.js"></script>
       
     
   </body>

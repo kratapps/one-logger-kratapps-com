@@ -12,7 +12,7 @@
         <link rel="prev" href="../log-lifecycle/">
       
       
-        <link rel="next" href="../log-database-errors/">
+        <link rel="next" href="../logging-examples/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -821,9 +821,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples-try-catch-finally" class="md-nav__link">
+  <a href="#examples-try-catch-finally-publish" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples: try-catch-finally
+      Examples: try-catch-finally-publish
     </span>
   </a>
   
@@ -845,11 +845,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../logging-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../log-database-errors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Log Database Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../async-job-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Async Job Logging
   </span>
   
 
@@ -913,6 +955,27 @@
   
   <span class="md-ellipsis">
     Unit Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permission-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permission Manager
   </span>
   
 
@@ -1688,9 +1751,10 @@
 
 
 <h1 id="top-level-apex">Top Level Apex</h1>
-<p>Don't publish logs in every method; it is recommended to publish only at the top-level Apex code.
-The best practice is to wrap your code at the top-level Apex in a try-catch-finally block to log unexpected errors
-and publish all the registered log events.</p>
+<p>Don't publish logs in every method; it is recommended to publish only at the
+top-level Apex code. The best practice is to wrap your code at the top-level
+Apex in a try-catch-finally-publish block to log unexpected errors and publish
+all the registered log events.</p>
 <h2 id="examples-top-level-apex">Examples: Top-level Apex</h2>
 <ul>
 <li>Apex triggers.</li>
@@ -1702,8 +1766,8 @@ and publish all the registered log events.</p>
 <li>REST resource annotated methods, e.g. <code>@HttpGet</code>, <code>@HttpPost</code>.</li>
 <li>Inbound email handler <code>handleInboundEmail</code> methods.</li>
 </ul>
-<h2 id="examples-try-catch-finally">Examples: try-catch-finally</h2>
-<p>Example of the try-catch-finally publish pattern.</p>
+<h2 id="examples-try-catch-finally-publish">Examples: try-catch-finally-publish</h2>
+<p>Example of the try-catch-finally-publish pattern.</p>
 <pre><code class="language-apex">// First Apex code executed.
 try {
     // Rest of the implementation
@@ -1716,8 +1780,8 @@ try {
     ok.Logger.publish();
 }
 </code></pre>
-<p>Sometimes, you may need to rethrow the unexpected exception to roll back the transaction.
-This is particularly helpful in triggers.</p>
+<p>Sometimes, you may need to rethrow the unexpected exception to roll back the
+transaction. This is particularly helpful in triggers.</p>
 <pre><code class="language-apex">trigger AccountTrigger on Account(before insert) {
     ok.Logger logger = ok.Logger.getTriggerLogger();
     try {
@@ -1732,14 +1796,15 @@ This is particularly helpful in triggers.</p>
 }
 </code></pre>
 <blockquote>
-<p>⚠ The following example is not a top-level Apex and should not call the <code>publish</code> method.</p>
+<p>⚠ The following example is not a top-level Apex and should not call the
+<code>publish</code> method.</p>
 </blockquote>
 <pre><code class="language-apex">public Boolean grantAccess(Id userId) {
     Boolean granted = hasPermission(userId);
     if (granted) {
         logger.info().linkSObject(userId).log('Permission granted.');
     }
-    // There should be no try-catch-finally blocks and no publishing in this method.
+    // There should be no try-catch-finally-publish block and no publishing in this method.
     return granted;
 }
 </code></pre>
@@ -1795,13 +1860,13 @@ This is particularly helpful in triggers.</p>
         
         
           
-          <a href="../log-database-errors/" class="md-footer__link md-footer__link--next" aria-label="Next: Log Database Errors">
+          <a href="../logging-examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Logging Examples">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Log Database Errors
+                Logging Examples
               </div>
             </div>
             <div class="md-footer__button md-icon">
