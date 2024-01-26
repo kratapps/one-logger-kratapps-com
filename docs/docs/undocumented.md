@@ -16,15 +16,3 @@ external log object and call `ok.Logger.publishExternalLogs(Trigger.new);`.
 Some configurations can be found in the
 [External Logs for One Logger](https://kratapps.com/one-logger/plugins/external-logs-for-one-logger/)
 plugin.
-
-### Permission Manager
-
-Our API provide simple way to assign licenses or our permission sets.
-
-Let's say you want to assign the Logger_Create_Logs permission set to every new
-active user. You can call `PermissionManager.assignCreateLogsPermSet(userIds)`
-to assign it from your user trigger.
-
-See
-[Permission Manager reference](https://kratapps.com/one-logger/latest/reference/PermissionManager.cls)
-for all features.
