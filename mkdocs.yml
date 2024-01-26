@@ -85,6 +85,7 @@ nav:
       - Top Level Apex: docs/api/top-level-apex.md
       - Logging Examples: docs/api/logging-examples.md
       - Log Database Errors: docs/api/log-database-errors.md
+      - Async Job Logging: docs/api/async-job-logging.md
       - Flow Logging: docs/api/flow-logging.md
       - LWC Logging: docs/api/lwc-logging.md
       - Unit Testing: docs/api/unit-testing.md

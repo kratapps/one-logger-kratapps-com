@@ -1,4 +1,4 @@
-# Logging from Async
+# Async Job Logging
 
 Most of the asynchronous jobs are [top level Apex](top-level-apex.md) and should
 implement the try-catch-finally-publish pattern.
