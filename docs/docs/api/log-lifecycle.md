@@ -61,20 +61,56 @@ ok.Logger logger = ok.Logger.getAnonymousBlockLogger();
 
 **Flow logger**
 
-There's no need to initialize a flow logger, see
-[Flow Logging](flow-logging.md).
+See [Flow Logging](flow-logging.md).
+
+**LWC logger**
+
+See [LWC Logging](lwc-logging.md).
 
 ## Build Log Data
 
-TODO
+First, you need to create a [ok.Log](../../reference/Log.md) — an Apex data
+class. The following methods on the `ok.Logger` instance will create a
+corresponding `ok.Log` instance:
 
-Visit the [Log Examples](log-examples.md) page for more examples.
+-   `logger.error().log(message);`
+-   `logger.warn().log(message);`
+-   `logger.info().log(message);`
+-   `logger.debug().log(message);`
+-   `logger.fine().log(message);`
+-   `logger.finer().log(message);`
+-   `logger.finest().log(message);`
+-   `logger.logDatabaseFailures(List<Database.*>)` -
+    [Log Database Errors](log-database-errors.md)
+-   `logger.publishExternalLogs()` - [Log External](log-external.md)
 
-See [Log](../../reference/Log.md) for all available methods.
+Enhance the log by chaining various methods on the `ok.Log`; see all available
+methods in the [ok.Log](../../reference/Log.md) reference.
+
+Basic logging example:
+
+```apex
+public class SpaceshipController {
+    private static ok.Logger logger = ok.Logger.getLogger(SpaceshipController.class);
+    private Spaceship__c spaceship;
+
+    public Boolean prepareForHyperspaceJump() {
+        Id pilotId = UserInfo.getUserId();
+        Boolean isAuthorized = isHyperspaceJumpAuthorized(pilotId);
+        if (!isAuthorized) {
+            logger.warn().linkSObject(spaceship).linkSObject2(pilotId).log('Pilot is not authorized.');
+            return false;
+        }
+        logger.info().linkSObject(spaceship).log('Hyperspace jump is ready.');
+        return true;
+    }
+}
+```
 
 ## Register Logs for Publishing
 
-Call `.log(message)` method to register the log. During registration, a
+Once you include all the information in the log, you can call `.log(message)`
+method to register the log. During registration, a
 [log event](../../reference/ok__Log_Event__e.md) is constructed and printed to
 the console if system debugging is enabled. You should treat the log object as
 read-only once you register it.
@@ -82,10 +118,6 @@ read-only once you register it.
 ```apex
 logger.error().log('Hello Message.');
 ```
-
-**LWC logger**
-
-See [LWC Logging](lwc-logging.md).
 
 ## Publish Log Events
 

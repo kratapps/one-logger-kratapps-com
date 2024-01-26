@@ -6,7 +6,8 @@
 
 Data class used for constructing the log event.
 
-This class is used to build the `ok__Log_Event__e`, which is then saved to the database as the custom sObject `ok__Log__c`.
+This class is used to build the `ok__Log_Event__e`, which is then saved to the
+database as the custom sObject `ok__Log__c`.
 
 ## Methods
 
@@ -32,3 +33,42 @@ This class is used to build the `ok__Log_Event__e`, which is then saved to the d
 | addRestResponse | RestResponse res, Object responseBody             | ok.Log  | Includes REST response data. Response body is either the return value of the method or RestContext.response.        |
 | addTags         | Set<String\> tagNames                             | ok.Log  | Add tags to a log.                                                                                                  |
 | addTag          | String tagName                                    | ok.Log  | Add tag to a log.                                                                                                   |
+
+## Specification
+
+### Payload
+
+The payload is a universal field designated specifically for storing generic
+data.
+
+**Methods**
+
+-   `.addPayload(Object payload)` - The payload value is converted to a string
+    if it is not already a string.
+-   `.addPayloadJson(Object payload)` - The payload value is serialized into
+    JSON and can be used to log Apex objects, Apex collections, SObjects, etc.
+
+**Fields**
+
+-   `ok__Payload__c` - Text data. JSON in case of `addPayloadJson`.
+
+**Example**
+
+```apex
+// String payload example:
+Datetime now = Datetime.now();
+logger.info().addPayload(now).log('String payload.');
+
+// Serialized payload example:
+public class Person {
+    public String firstName;
+    public String lastName;
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+Person anakin = new Person('Anakin',  'Skywalker');
+logger.info().addPayloadJson(anakin).log('Apex object serialized.');
+```

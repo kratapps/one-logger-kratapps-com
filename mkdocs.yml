@@ -83,9 +83,10 @@ nav:
       - Logger API: docs/api/index.md
       - Log Lifecycle: docs/api/log-lifecycle.md
       - Top Level Apex: docs/api/top-level-apex.md
-      - Unit Testing: docs/api/unit-testing.md
+      - Log Database Errors: docs/api/log-database-errors.md
       - Flow Logging: docs/api/flow-logging.md
       - LWC Logging: docs/api/lwc-logging.md
+      - Unit Testing: docs/api/unit-testing.md
       - Plugin Development: docs/api/plugin-development.md
       - Logger for ISV: docs/api/logger-for-isv.md
     - Pricing: pricing.md 
