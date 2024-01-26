@@ -107,6 +107,8 @@ public class SpaceshipController {
 }
 ```
 
+See more [Log Examples](log-examples.md).
+
 ## Register Logs for Publishing
 
 Once you include all the information in the log, you can call `.log(message)`

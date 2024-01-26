@@ -20,34 +20,6 @@ if (resp.getStatusCode() == 200) {
 logger.info().addRestRequest(RestContext.request).log('Inbound REST request.');
 ```
 
-### Database Error Logger
-
-Create logs at level ERROR from database results. Use the `logDatabaseFailures`
-method to register logs from failed save results. This method does not publish
-the logs.
-
-```apex
-List<Database.SaveResult> saveResults = Database.insert(records, false);
-logger.logDatabaseFailures(saveResults);
-```
-
-Supported collections:
-
--   List<Database.DeleteResult>
--   List<Database.LeadConvertResult>
--   List<Database.MergeResult>
--   List<Database.SaveResult>
--   List<Database.UndeleteResult>
--   List<Database.UpsertResult>
-
-### Anonymous Block Apex Logger
-
-Use anonymous block logger when logging from anonymous apex scripts.
-
-```apex
-final ok.Logger logger = ok.Logger.getAnonymousBlockLogger();
-```
-
 ### Logging in Batch Apex
 
 Call `ok.Logger.setBatchableContext(ctx)` at the beginning of `start`, `execute`
