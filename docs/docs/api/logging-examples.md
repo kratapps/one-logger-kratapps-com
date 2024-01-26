@@ -60,6 +60,56 @@ Person anakin = new Person('Anakin',  'Skywalker');
 logger.info().addPayloadJson(anakin).log('Apex object serialized.');
 ```
 
+### Logging from a Batch
+
+Batch job methods are [top level Apex](top-level-apex.md) methods and should
+implement the try-catch-finally-publish pattern.
+
+```apex
+public class Order66 implements Database.Batchable<SObject> {
+    private static ok.Logger logger = ok.Logger.getLogger(Order66.class);
+
+    public void execute(Database.BatchableContext context, List<SObject> scope) {
+        try {
+            // Set the context of the batch.
+            // All the logs within this method will have their batch fields populated.
+            ok.Logger.setBatchableContext(context);
+            // Next is your implementation of the batchable job.
+            someOperation();
+        } catch (Exception e) {
+            loggr.error().addException(e).log('Batch failed.');
+        } finally {
+            ok.Logger.publish();
+        }
+    }
+}
+```
+
+### Logging from a Schedulable Job
+
+Schedulable job method is a [top level Apex](top-level-apex.md) method and
+should implement the try-catch-finally-publish pattern.
+
+```apex
+public class Order66 implements SchedulableContext {
+    private static ok.Logger logger = ok.Logger.getLogger(Order66.class);
+
+    public void execute(SchedulableContext context) {
+        try {
+            // Set the context of the schedulable job.
+            // All the logs within this method will have their batch fields populated.
+            ok.Logger.setSchedulableContext(context);
+            // Next is your implementation of the schedulable job.
+            someOperation();
+        } catch (Exception e) {
+            loggr.error().addException(e).log('Scheduled job failed.');
+        } finally {
+            ok.Logger.publish();
+        }
+    }
+}
+```
+
 ## HTTP Callout
 
 ```apex

@@ -33,8 +33,8 @@ Similar to the Apex class, the trigger logger will be initialized simply with
 `getTriggerLogger`.
 
 > ⚠ A trigger code is a [top-level Apex](top-level-apex.md), and its code should
-> be wrapped in a try-catch-finally block with error logging and publishing. The
-> exception should be rethrown to roll back the transaction.
+> be wrapped in a try-catch-finally-publish block with error logging and
+> publishing. The exception should be rethrown to roll back the transaction.
 
 ```apex
 trigger AccountTrigger on Account(before insert) {

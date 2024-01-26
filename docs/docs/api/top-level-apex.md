@@ -1,8 +1,9 @@
 # Top Level Apex
 
-Don't publish logs in every method; it is recommended to publish only at the top-level Apex code.
-The best practice is to wrap your code at the top-level Apex in a try-catch-finally block to log unexpected errors
-and publish all the registered log events.
+Don't publish logs in every method; it is recommended to publish only at the
+top-level Apex code. The best practice is to wrap your code at the top-level
+Apex in a try-catch-finally-publish block to log unexpected errors and publish
+all the registered log events.
 
 ## Examples: Top-level Apex
 
@@ -15,9 +16,9 @@ and publish all the registered log events.
 -   REST resource annotated methods, e.g. `@HttpGet`, `@HttpPost`.
 -   Inbound email handler `handleInboundEmail` methods.
 
-## Examples: try-catch-finally
+## Examples: try-catch-finally-publish
 
-Example of the try-catch-finally publish pattern.
+Example of the try-catch-finally-publish pattern.
 
 ```apex
 // First Apex code executed.
@@ -33,8 +34,8 @@ try {
 }
 ```
 
-Sometimes, you may need to rethrow the unexpected exception to roll back the transaction.
-This is particularly helpful in triggers.
+Sometimes, you may need to rethrow the unexpected exception to roll back the
+transaction. This is particularly helpful in triggers.
 
 ```apex
 trigger AccountTrigger on Account(before insert) {
@@ -51,7 +52,8 @@ trigger AccountTrigger on Account(before insert) {
 }
 ```
 
-> ⚠ The following example is not a top-level Apex and should not call the `publish` method.
+> ⚠ The following example is not a top-level Apex and should not call the
+> `publish` method.
 
 ```apex
 public Boolean grantAccess(Id userId) {
@@ -59,7 +61,7 @@ public Boolean grantAccess(Id userId) {
     if (granted) {
         logger.info().linkSObject(userId).log('Permission granted.');
     }
-    // There should be no try-catch-finally blocks and no publishing in this method.
+    // There should be no try-catch-finally-publish block and no publishing in this method.
     return granted;
 }
 ```
