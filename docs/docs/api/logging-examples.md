@@ -38,7 +38,7 @@ public void safeOperation() {
 }
 ```
 
-### Add Payload
+## Add Payload
 
 ```apex
 // String payload example:
@@ -60,10 +60,12 @@ Person anakin = new Person('Anakin',  'Skywalker');
 logger.info().addPayloadJson(anakin).log('Apex object serialized.');
 ```
 
-### Logging from a Batch
+## Logging from a Batch Apex
 
 Batch job methods are [top level Apex](top-level-apex.md) methods and should
 implement the try-catch-finally-publish pattern.
+
+See [Logging from Async](logging-from-async.md).
 
 ```apex
 public class Order66 implements Database.Batchable<SObject> {
@@ -85,10 +87,12 @@ public class Order66 implements Database.Batchable<SObject> {
 }
 ```
 
-### Logging from a Schedulable Job
+## Logging from a Schedulable Apex
 
 Schedulable job method is a [top level Apex](top-level-apex.md) method and
 should implement the try-catch-finally-publish pattern.
+
+See [Logging from Async](logging-from-async.md).
 
 ```apex
 public class Order66 implements SchedulableContext {

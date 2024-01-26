@@ -1,22 +1,3 @@
-### Logging in Batch Apex
-
-Call `ok.Logger.setBatchableContext(ctx)` at the beginning of `start`, `execute`
-and `finish` methods to provide the batchable context to logger.
-
-Log fields populated:
-
--   Batch Job Id
--   Batch Child Job Id
-
-### Logging in Schedulable Apex
-
-Call `ok.Logger.setSchedulableContext(ctx)` at the beginning of the `execute`
-method to provide the schedulable context to logger.
-
-Log fields populated:
-
--   Schedulable Cron Trigger Job Id
-
 ### Import External Logs
 
 You can configure external log import to publish One Logger events when logs

@@ -6,6 +6,8 @@
 
 Log object.
 
+For Apex data class, see [ok.Log](Log.md).
+
 ## Fields
 
 | Label                                 | Name                                             | Type      | Required | Description                                                                                                                                                                                                                                                                                                                                                                                    |
