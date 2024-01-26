@@ -90,25 +90,26 @@ nav:
       - Plugin Development: docs/api/plugin-development.md
       - Logger for ISV: docs/api/logger-for-isv.md
     - Pricing: pricing.md 
-  - Object Reference:
-    - Log: reference/ok__Log__c.md
-    - Transaction Log: reference/ok__Transaction_Log__c.md
-    - Log Event: reference/ok__Log_Event__e.md
-    - Tag: reference/ok__Tag__c.md
-    - Log Tag: reference/ok__Log_Tag__c.md
-    - Log Search: reference/ok__Log_Search__c.md
-    - Log Filter: reference/ok__Log_Filter__mdt.md
-    - Logger Settings: reference/ok__Logger_Settings__mdt.md
-    - Logger Hierarchy Settings: reference/ok__Logger_Hierarchy_Settings__c.md
-    - External Log Import: reference/ok__External_Log_Import__mdt.md
-    - External Log Field Mapping: reference/ok__External_Log_Field_Mapping__mdt.md
-  - Apex Reference:
-    - Log: reference/Log.md
-    - Logger: reference/Logger.md
-    - InvocableLog: reference/InvocableLog.md
-    - InvocableErrorLogger: reference/InvocableErrorLogger.md
-    - PermissionManager: reference/PermissionManager.md
-    - LoggerTestUtil: reference/LoggerTestUtil.md
+  - Reference:
+    - Objet Reference:
+      - Log: reference/ok__Log__c.md
+      - Transaction Log: reference/ok__Transaction_Log__c.md
+      - Log Event: reference/ok__Log_Event__e.md
+      - Tag: reference/ok__Tag__c.md
+      - Log Tag: reference/ok__Log_Tag__c.md
+      - Log Search: reference/ok__Log_Search__c.md
+      - Log Filter: reference/ok__Log_Filter__mdt.md
+      - Logger Settings: reference/ok__Logger_Settings__mdt.md
+      - Logger Hierarchy Settings: reference/ok__Logger_Hierarchy_Settings__c.md
+      - External Log Import: reference/ok__External_Log_Import__mdt.md
+      - External Log Field Mapping: reference/ok__External_Log_Field_Mapping__mdt.md
+    - Apex Reference:
+      - Log: reference/Log.md
+      - Logger: reference/Logger.md
+      - InvocableLog: reference/InvocableLog.md
+      - InvocableErrorLogger: reference/InvocableErrorLogger.md
+      - PermissionManager: reference/PermissionManager.md
+      - LoggerTestUtil: reference/LoggerTestUtil.md
   - Release Notes:
     - 1.44: release-notes/1.44.md
     - 1.43: release-notes/1.43.md
