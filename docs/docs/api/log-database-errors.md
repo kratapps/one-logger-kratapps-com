@@ -22,7 +22,7 @@ Keep the logs grouped to improve performance.
 -   `List<Database.UndeleteResult>`
 -   `List<Database.UpsertResult>`
 
-**Fields affected**
+**Fields**
 
 -   `ok__Payload__c` - List of failed results if grouped, single result
     otherwise.
