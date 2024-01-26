@@ -98,16 +98,18 @@ public class SpaceshipController {
         Id pilotId = UserInfo.getUserId();
         Boolean isAuthorized = isHyperspaceJumpAuthorized(pilotId);
         if (!isAuthorized) {
+            // WARNING log.
             logger.warn().linkSObject(spaceship).linkSObject2(pilotId).log('Pilot is not authorized.');
             return false;
         }
-        logger.info().linkSObject(spaceship).log('Hyperspace jump is ready.');
+        // INFO log.
+        logger.info().addPayloadJson(spaceship.getEngineStatus()).log('Hyperspace jump is ready.');
         return true;
     }
 }
 ```
 
-See more [Log Examples](log-examples.md).
+See more [Logging Examples](logging-examples.md).
 
 ## Register Logs for Publishing
 

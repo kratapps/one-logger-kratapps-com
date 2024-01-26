@@ -1,25 +1,3 @@
-```apex
-// log at info
-logger.info().log('Hello Logger!');
-
-// log custom payload data
-logger.info().payload(customData).log('Log with custom payload.');
-
-// log at error with sobject data and with exception
-logger.error().linkSObject(account).addException(e).log('Insert failed.');
-
-// log http request
-HttpResponse resp = new Http().send(req);
-if (resp.getStatusCode() == 200) {
-    logger.info().addHttpRequest(req).addHttpResponse(resp).log('HTTP request success.');
-} else {
-    logger.error().addHttpRequest(req).addHttpResponse(resp).log('HTTP request failed.');
-}
-
-// log rest request
-logger.info().addRestRequest(RestContext.request).log('Inbound REST request.');
-```
-
 ### Logging in Batch Apex
 
 Call `ok.Logger.setBatchableContext(ctx)` at the beginning of `start`, `execute`
@@ -38,40 +16,6 @@ method to provide the schedulable context to logger.
 Log fields populated:
 
 -   Schedulable Cron Trigger Job Id
-
-### Inbound email logging
-
-Log inbound email.
-
-```apex
-Messaging.InboundEmail email;
-Messaging.InboundEnvelope envelope;
-logger.info().addInboundEmail(email, envelope).addException(e).log('Outbound emails.');
-```
-
-Log outbound email(s).
-
-```apex
-Messaging.Email email;
-logger.info().addEmail(email).addException(e).log('Outbound email.');
-
-List<Messaging.Email> emails;
-logger.info().addEmails(emails).addException(e).log('Outbound emails.');
-```
-
-### Hide Secrets
-
-The logging utility offers two methods, `hideSecret(String)` and
-`hideSecrets(List<String>)`, which are designed to conceal sensitive information
-within text fields of log records. These methods effectively obfuscate the
-specified secrets, ensuring their confidentiality. By utilizing these methods,
-you can safeguard sensitive data from being exposed in log entries. User's
-access token is automatically added to secrets.
-
-```apex
-String secretValue;
-logger.info(secretValue).hideSecret(secret).log('Log with a secret.');
-```
 
 ### Import External Logs
 
