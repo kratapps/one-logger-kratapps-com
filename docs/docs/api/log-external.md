@@ -13,4 +13,4 @@ Fully configurable through custom metadata:
 -   [External Log Field Mapping](../../reference/ok__External_Log_Field_Mapping__mdt.md)
 
 The list of configured external logs is available
-[here](../../extensions/external-logs-for-one-logger.md).
+[here](../../extensions/external-logs/index.md).
