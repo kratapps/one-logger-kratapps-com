@@ -6,8 +6,8 @@
 -   **Package Name**: DLRS Logs for One Logger
 -   **Directory**: `src/dlrs`
 -   **External Log**: `dlrs__LookupRollupSummaryLog__c`
--   **Package ID**: `0337Q000000DpFo`
--   **Version ID**: `04t7Q000000EFdV`
+-   **Package ID**: `033av00000002pp`
+-   **Version ID**: `04tav00000002kz`
 
 **Mappings**
 

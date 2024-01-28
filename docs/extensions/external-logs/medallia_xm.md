@@ -6,8 +6,8 @@
 -   **Package Name**: Medallia Logs for One Logger
 -   **Directory**: `src/medallia_xm`
 -   **External Log**: `medallia_xm__Log__c`
--   **Package ID**: `0337Q000000DpFy`
--   **Version ID**: `04t7Q000000EFZI`
+-   **Package ID**: `033av00000002t3`
+-   **Version ID**: `04tav00000002oD`
 
 **Mappings**
 
