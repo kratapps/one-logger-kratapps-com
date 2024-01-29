@@ -2,18 +2,20 @@
 
 This page documents how to control the logging execution in your unit tests.
 
-See [Logger Test Util Reference](../../reference/LoggerTestUtil.md).
+See [Logger Test Util Reference](../reference/LoggerTestUtil.md).
 
 ## Enable system debug
 
-System debug (Apex Log) is disabled by default in unit tests, as the custom settings record does not exist.
-You can enable system debug in unit tests explicitly using `LoggerTestUtil.enableDebugLogs();`.
+System debug (Apex Log) is disabled by default in unit tests, as the custom
+settings record does not exist. You can enable system debug in unit tests
+explicitly using `LoggerTestUtil.enableDebugLogs();`.
 
 ## Fail tests automatically on error
 
-When an error is logged from within a unit test, an `ErrorLoggedException` exception is thrown by default to fail the test.
-Sometimes, it is expected in the test for an error to be logged.
-In that case, you can disable this behavior using `LoggerTestUtil.disableErrorLoggedException();`.
+When an error is logged from within a unit test, an `ErrorLoggedException`
+exception is thrown by default to fail the test. Sometimes, it is expected in
+the test for an error to be logged. In that case, you can disable this behavior
+using `LoggerTestUtil.disableErrorLoggedException();`.
 
 In the following example, the test method will fail and ends the test:
 
@@ -57,9 +59,10 @@ private class SpaceshipControllerTest {
 
 ## Assert registered events
 
-Publishing is disabled by default in unit tests to improve performance.
-If you need to assert expected logs, you can directly work with the registered events.
-Use the API to retrieve the last error event or all registered events, no need to query logs.
+Publishing is disabled by default in unit tests to improve performance. If you
+need to assert expected logs, you can directly work with the registered events.
+Use the API to retrieve the last error event or all registered events, no need
+to query logs.
 
 Work with last error log event:
 
@@ -109,10 +112,11 @@ static void logEventsAreInCorrectOrder() {
 
 ## Enable event publishing
 
-You can enable event publishing and log record insertion in unit tests by calling `ok.LoggerTestUtil.enableEventPublishing()`.
+You can enable event publishing and log record insertion in unit tests by
+calling `ok.LoggerTestUtil.enableEventPublishing()`.
 
-> ⚠️ Enabling event publishing is not recommended as it affects unit test performance.
-> Instead, consider using `getLogEvents` or `getLastErrorLogEvent`.
+> ⚠️ Enabling event publishing is not recommended as it affects unit test
+> performance. Instead, consider using `getLogEvents` or `getLastErrorLogEvent`.
 
 ```apex
 @IsTest

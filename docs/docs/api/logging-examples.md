@@ -1,8 +1,7 @@
 # Logging Examples
 
-See specifications for logging on the
-[Logger Reference](../../reference/Logger.md) page and
-[Log Reference](../../reference/Log.md) page.
+See specifications for logging on the [Logger Reference](../reference/Logger.md)
+page and [Log Reference](../reference/Log.md) page.
 
 ## Basic Logging
 

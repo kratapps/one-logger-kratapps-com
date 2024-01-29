@@ -10,14 +10,15 @@
 
 Log errors from flows.
 
-Alternatively, use the following invocable loggers to employ a different logging level:
+Alternatively, use the following invocable loggers to employ a different logging
+level:
 
 -   WARN - Using [InvocableWarnLogger](InvocableWarnLogger.md).
 -   INFO - Using [InvocableInfoLogger](InvocableInfoLogger.md).
 -   DEBUG - Using [InvocableDebugLogger](InvocableDebugLogger.md).
 -   FINE - Using [InvocableFineLogger](InvocableFineLogger.md).
 
-See [Flow Logging](../docs/api/flow-logging.md).
+See [Flow Logging](../api/flow-logging.md).
 
 ## Static Methods
 

@@ -11,7 +11,7 @@ every new active user, you can achieve this by invoking
 `PermissionManager.assignCreateLogsPermSet(userIds)` method from within a User
 trigger.
 
-See [Permission Manager Reference](../../reference/PermissionManager.md).
+See [Permission Manager Reference](../reference/PermissionManager.md).
 
 ```apex
 public void onAfterInsert(List<User> users) {

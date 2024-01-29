@@ -39,7 +39,7 @@ database as the custom sObject `ok__Log__c`.
 ### Add Payload
 
 The payload is a universal field designated specifically for storing generic
-data. See [Example](../docs/api/logging-examples.md#add-payload).
+data. See [Example](../api/logging-examples.md#add-payload).
 
 **Methods**
 

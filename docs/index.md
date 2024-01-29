@@ -44,10 +44,10 @@ See more [examples](docs/api/logging-examples.md).
 ## Contents
 
 -   [Docs](docs/getting-started/setup.md)
--   [Object Reference](reference/ok__Log__c.md)
--   [Apex Reference](reference/Log.md)
--   [Release Notes](release-notes/1.44.md)
--   [Plugins](plugins/slack-for-one-logger.md)
+-   [Object Reference](docs/reference/ok__Log__c.md)
+-   [Apex Reference](docs/reference/Log.md)
+-   [Release Notes](docs/release-notes/1.44.md)
+-   [Plugins](docs/plugins/slack-for-one-logger.md)
 
 ## Pricing
 

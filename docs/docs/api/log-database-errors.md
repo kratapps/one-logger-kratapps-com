@@ -5,8 +5,8 @@ when using the `allOrNone=false` option.
 
 If there are more than one error, either one log per error is created, or one
 log per all errors is created, depending on your logger configuration. See the
-[Group Database Failures](../../reference/ok__Logger_Settings__mdt.md) option.
-Keep the logs grouped to improve performance.
+[Group Database Failures](../reference/ok__Logger_Settings__mdt.md) option. Keep
+the logs grouped to improve performance.
 
 **Methods**
 

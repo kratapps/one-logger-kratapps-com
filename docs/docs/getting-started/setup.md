@@ -36,7 +36,7 @@
     Use [Permission Manager app](../ui/permission-manager.md) to review user
     permissions.
 
-    Use [Permission Manager API](../../reference/PermissionManager.md) to
+    Use [Permission Manager API](../reference/PermissionManager.md) to
     programmatically assign permission sets and licenses.
 
 4. **Activate Log Record Page**  

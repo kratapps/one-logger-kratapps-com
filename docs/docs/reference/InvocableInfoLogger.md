@@ -1,17 +1,17 @@
-# Invocable Warn Logger Reference
+# Invocable Info Logger Reference
 
 **Type**: Apex Class
 
-**API Name**: `ok.InvocableWarnLogger`
+**API Name**: `ok.InvocableInfoLogger`
 
-**Label**: Log Warn
+**Label**: Log Info
 
 **Category**: Logging
 
-See [Flow Logging](../docs/api/flow-logging.md).
+See [Flow Logging](../api/flow-logging.md).
 
 ## Static Methods
 
 | Method       | Params                   | Returns | Description           |
 | ------------ | ------------------------ | ------- | --------------------- |
-| logInvocable | List<InvocableLog\> logs |         | Log warn from a flow. |
+| logInvocable | List<InvocableLog\> logs |         | Log info from a flow. |

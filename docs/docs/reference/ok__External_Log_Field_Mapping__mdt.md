@@ -4,8 +4,8 @@
 
 **API Name**: `ok__External_Log_Field_Mapping__mdt`
 
-Map external log field to One Logger log field.
-Child object to External Log Import.
+Map external log field to One Logger log field. Child object to External Log
+Import.
 
 ## Fields
 

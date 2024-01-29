@@ -8,7 +8,7 @@
 
 **Category**: Logging
 
-See [Flow Logging](../docs/api/flow-logging.md).
+See [Flow Logging](../api/flow-logging.md).
 
 ## Static Methods
 

@@ -7,9 +7,9 @@ Logger configuration overview page.
 The logger is already configured after the first installation, but you can make
 changes to the configuration through two objects.
 
--   [Logger Settings](../../reference/ok__Logger_Settings__mdt.md) custom
-    metadata with the name `Settings`.
--   [Hierarchy Logger Settings](../../reference/ok__Logger_Hierarchy_Settings__c.md)
+-   [Logger Settings](../reference/ok__Logger_Settings__mdt.md) custom metadata
+    with the name `Settings`.
+-   [Hierarchy Logger Settings](../reference/ok__Logger_Hierarchy_Settings__c.md)
     custom settings.
 
 Don't forget that:

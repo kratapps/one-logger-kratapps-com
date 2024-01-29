@@ -2,12 +2,11 @@
 
 A log can have several forms throughout the lifecycle:
 
--   Log data (`ok.Log` apex class) - See
-    [Log Reference](../../reference/Log.md).
+-   Log data (`ok.Log` apex class) - See [Log Reference](../reference/Log.md).
 -   Log event (`ok__Log_Event__e` platform event) - See
-    [Log Event Reference](../../reference/ok__Log_Event__e.md).
+    [Log Event Reference](../reference/ok__Log_Event__e.md).
 -   Log record (`ok__Log__c` custom object) - See
-    [Log Reference](../../reference/ok__Log__c.md).
+    [Log Reference](../reference/ok__Log__c.md).
 
 The log lifecycle includes following stages:
 
@@ -69,9 +68,9 @@ See [LWC Logging](lwc-logging.md).
 
 ## Build Log Data
 
-First, you need to create a [ok.Log](../../reference/Log.md) — an Apex data
-class. The following methods on the `ok.Logger` instance will create a
-corresponding `ok.Log` instance:
+First, you need to create a [ok.Log](../reference/Log.md) — an Apex data class.
+The following methods on the `ok.Logger` instance will create a corresponding
+`ok.Log` instance:
 
 -   `logger.error().log(message);`
 -   `logger.warn().log(message);`
@@ -85,7 +84,7 @@ corresponding `ok.Log` instance:
 -   `logger.publishExternalLogs()` - [Log External](log-external.md)
 
 Enhance the log by chaining various methods on the `ok.Log`; see all available
-methods in the [ok.Log](../../reference/Log.md) reference.
+methods in the [ok.Log](../reference/Log.md) reference.
 
 Basic logging example:
 
@@ -115,8 +114,8 @@ See more [Logging Examples](logging-examples.md).
 
 Once you include all the information in the log, you can call `.log(message)`
 method to register the log. During registration, a
-[log event](../../reference/ok__Log_Event__e.md) is constructed and printed to
-the console if system debugging is enabled. You should treat the log object as
+[log event](../reference/ok__Log_Event__e.md) is constructed and printed to the
+console if system debugging is enabled. You should treat the log object as
 read-only once you register it.
 
 ```apex
@@ -137,9 +136,9 @@ ok.Logger.publish();
 
 ## Log Records Creation
 
-Once the [`ok__Log_Event__e`](../../reference/ok__Log_Event__e.md) events are
+Once the [`ok__Log_Event__e`](../reference/ok__Log_Event__e.md) events are
 published, they are consumed by a platform event trigger and saved in the
-database as [`ok__Log__c`](../../reference/ok__Log__c.md) records.
+database as [`ok__Log__c`](../reference/ok__Log__c.md) records.
 
 > ⚠ Avoid triggers on the `ok__Log__c` object, as such triggers can cause a loss
 > of the logs. Instead, develop a custom plugin.

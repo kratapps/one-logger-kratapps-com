@@ -96,34 +96,34 @@ nav:
     - Pricing: pricing.md 
   - Reference:
     - Objet Reference:
-      - Log: reference/ok__Log__c.md
-      - Transaction Log: reference/ok__Transaction_Log__c.md
-      - Log Event: reference/ok__Log_Event__e.md
-      - Tag: reference/ok__Tag__c.md
-      - Log Tag: reference/ok__Log_Tag__c.md
-      - Log Search: reference/ok__Log_Search__c.md
-      - Log Filter: reference/ok__Log_Filter__mdt.md
-      - Logger Settings: reference/ok__Logger_Settings__mdt.md
-      - Logger Hierarchy Settings: reference/ok__Logger_Hierarchy_Settings__c.md
-      - External Log Import: reference/ok__External_Log_Import__mdt.md
-      - External Log Field Mapping: reference/ok__External_Log_Field_Mapping__mdt.md
+      - Log: docs/reference/ok__Log__c.md
+      - Transaction Log: docs/reference/ok__Transaction_Log__c.md
+      - Log Event: docs/reference/ok__Log_Event__e.md
+      - Tag: docs/reference/ok__Tag__c.md
+      - Log Tag: docs/reference/ok__Log_Tag__c.md
+      - Log Search: docs/reference/ok__Log_Search__c.md
+      - Log Filter: docs/reference/ok__Log_Filter__mdt.md
+      - Logger Settings: docs/reference/ok__Logger_Settings__mdt.md
+      - Logger Hierarchy Settings: docs/reference/ok__Logger_Hierarchy_Settings__c.md
+      - External Log Import: docs/reference/ok__External_Log_Import__mdt.md
+      - External Log Field Mapping: docs/reference/ok__External_Log_Field_Mapping__mdt.md
     - Apex Reference:
-      - Log: reference/Log.md
-      - Logger: reference/Logger.md
-      - InvocableLog: reference/InvocableLog.md
-      - InvocableErrorLogger: reference/InvocableErrorLogger.md
-      - PermissionManager: reference/PermissionManager.md
-      - LoggerTestUtil: reference/LoggerTestUtil.md
+      - Log: docs/reference/Log.md
+      - Logger: docs/reference/Logger.md
+      - InvocableLog: docs/reference/InvocableLog.md
+      - InvocableErrorLogger: docs/reference/InvocableErrorLogger.md
+      - PermissionManager: docs/reference/PermissionManager.md
+      - LoggerTestUtil: docs/reference/LoggerTestUtil.md
   - Release Notes:
-    - 1.47: release-notes/1.47.md
-    - 1.46: release-notes/1.46.md
-    - 1.45: release-notes/1.45.md
-    - 1.44: release-notes/1.44.md
-    - 1.43: release-notes/1.43.md
+    - 1.47: docs/release-notes/1.47.md
+    - 1.46: docs/release-notes/1.46.md
+    - 1.45: docs/release-notes/1.45.md
+    - 1.44: docs/release-notes/1.44.md
+    - 1.43: docs/release-notes/1.43.md
   - Plugins:
-    - Slack for One Logger: plugins/slack-for-one-logger.md
+    - Slack for One Logger: docs/plugins/slack-for-one-logger.md
   - Extensions:
     - External Logs:
-      - Overview: extensions/external-logs/index.md
-      - Declarative Lookup Rollup Summaries Tool (DLRS): extensions/external-logs/dlrs.md
-      - Medallia: extensions/external-logs/medallia_xm.md
+      - Overview: docs/extensions/external-logs/index.md
+      - Declarative Lookup Rollup Summaries Tool (DLRS): docs/extensions/external-logs/dlrs.md
+      - Medallia: docs/extensions/external-logs/medallia_xm.md

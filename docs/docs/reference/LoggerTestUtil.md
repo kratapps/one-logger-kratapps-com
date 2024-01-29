@@ -6,7 +6,7 @@
 
 This class provides features for controlling your unit test execution.
 
-See [Unit Testing](../docs/api/unit-testing.md).
+See [Unit Testing](../api/unit-testing.md).
 
 ## Static Methods
 
