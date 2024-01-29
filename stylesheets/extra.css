@@ -39,7 +39,7 @@ th, td {
 }
 
 .md-content img:not(a img) {
-    padding: 1rem;
+    /*padding: 1rem;*/
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
