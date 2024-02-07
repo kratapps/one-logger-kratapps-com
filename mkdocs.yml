@@ -93,7 +93,6 @@ nav:
       - Permission Manager: docs/api/permission-manager.md
       - Plugin Development: docs/api/plugin-development.md
       - Logger for ISV: docs/api/logger-for-isv.md
-    - Pricing: pricing.md 
   - Reference:
     - Objet Reference:
       - Log: docs/reference/ok__Log__c.md
