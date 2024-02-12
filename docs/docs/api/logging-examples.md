@@ -128,19 +128,43 @@ if (resp.getStatusCode() != 200) {
 ## Apex REST
 
 ```apex
-@RestResource(urlMapping='/Spaceship/*')
+@RestResource(UrlMapping='/spaceship/*')
 global with sharing class SpaceshipResource {
     private static ok.Logger logger = ok.Logger.getLogger(SpaceshipResource.class);
 
     @HttpGet
     global static String doGet() {
         try {
-            logger.info().addRestRequest(RestContext.request).log('REST request received.');
+            logger.info().addRestRequest(RestContext.request).log('GET received.');
             someOperation();
             return 'ok';
         } catch (Exception e) {
-            logger.error().addRestRequest(RestContext.request).log('Unexpected error.');
+            logger.error().addRestRequest(RestContext.request).log('GET handler error.');
             return 'err';
+        } finally {
+            ok.Logger.publish();
+        }
+    }
+
+    // Serializable='always' enables the logger to serialize the data and include it in the log.
+    @JsonAccess(Serializable='always')
+    global class SpaceshipDto {
+        global String name;
+    }
+
+    @HttpPost
+    global static void doPost(SpaceshipDto spaceship) {
+        RestResponse resp = new RestResponse();
+        RestContext.response = resp;
+        try {
+            someOperation(spaceship);
+            resp.statusCode = 200;
+            resp.responseBody = Blob.valueOf('ok');
+            logger.info().addRestRequest(RestContext.request, spaceship).addRestResponse(resp, resp.responseBody).log('POST handled.');
+        } catch (Exception e) {
+            resp.statusCode = 500;
+            resp.responseBody = Blob.valueOf('err');
+            logger.error().addRestRequest(RestContext.request, spaceship).addRestResponse(resp, resp.responseBody).log('POST handler error.');
         } finally {
             ok.Logger.publish();
         }
