@@ -129,8 +129,8 @@ if (resp.getStatusCode() != 200) {
 
 ```apex
 @RestResource(UrlMapping='/spaceship/*')
-global with sharing class SpaceshipResource {
-    private static ok.Logger logger = ok.Logger.getLogger(SpaceshipResource.class);
+global with sharing class SpaceshipRestResource {
+    private static ok.Logger logger = ok.Logger.getLogger(SpaceshipRestResource.class);
 
     @HttpGet
     global static String doGet() {
