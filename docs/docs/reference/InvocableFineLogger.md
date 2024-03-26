@@ -8,17 +8,9 @@
 
 **Category**: Logging
 
-Log errors from flows.
+See [Flow Logging](../api/flow-logging.md) for How To log from a flow.
 
-Alternatively, use the following invocable loggers to employ a different logging
-level:
-
--   WARN - Using [InvocableWarnLogger](InvocableWarnLogger.md).
--   INFO - Using [InvocableInfoLogger](InvocableInfoLogger.md).
--   DEBUG - Using [InvocableDebugLogger](InvocableDebugLogger.md).
--   FINE - Using [InvocableFineLogger](InvocableFineLogger.md).
-
-See [Flow Logging](../api/flow-logging.md).
+See [Invocable Log Reference](./InvocableLog.md) for all available attributes.
 
 ## Static Methods
 

@@ -1,3 +1,3 @@
 # One Logger Docs
 
-Docs: [one-logger.com](https://one-logger.com)
+Docs: [logger.kratapps.com](https://logger.kratapps.com)

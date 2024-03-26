@@ -8,7 +8,9 @@
 
 **Category**: Logging
 
-See [Flow Logging](../api/flow-logging.md).
+See [Flow Logging](../api/flow-logging.md) for How To log from a flow.
+
+See [Invocable Log Reference](./InvocableLog.md) for all available attributes.
 
 ## Static Methods
 
