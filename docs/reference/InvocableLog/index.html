@@ -274,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../release-notes/1.48/" class="md-tabs__link">
+        <a href="../../release-notes/latest/" class="md-tabs__link">
           
   
   Release Notes
@@ -1622,6 +1622,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../../release-notes/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    latest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/1.49/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.49
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../release-notes/1.48/" class="md-nav__link">
         
   
@@ -2022,6 +2064,18 @@
 <td>Name of the flow calling the logger.</td>
 </tr>
 <tr>
+<td>Inteview GUID</td>
+<td>string</td>
+<td>false</td>
+<td>Use <code>{!$Flow.InterviewGuid}</code> global variable. Sets the <code>ok__Interview_Guid__c</code> field on the log record.</td>
+</tr>
+<tr>
+<td>Fault Message</td>
+<td>string</td>
+<td>false</td>
+<td>Used in the Fault Path. Use <code>{!$Flow.FaultMessage}</code>. Sets fields <code>ok__Exception_Message__c</code>, <code>ok__Exception_Type__c</code>, <code>ok__First_Error_Message__c</code> and <code>ok__Stack_Trace__c</code>.</td>
+</tr>
+<tr>
 <td>Namespace Prefix</td>
 <td>string</td>
 <td>false</td>
@@ -2037,7 +2091,13 @@
 <td>SObject ID</td>
 <td>string</td>
 <td>false</td>
-<td>Linked SObject record.</td>
+<td>Link SObject record. Flow variant of the <code>linkSObject</code> method.</td>
+</tr>
+<tr>
+<td>SObject ID 2</td>
+<td>string</td>
+<td>false</td>
+<td>Link second SObject record. Flow variant of the <code>linkSObject2</code> method.</td>
 </tr>
 <tr>
 <td>Payload</td>
