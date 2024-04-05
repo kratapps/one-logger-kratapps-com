@@ -17,3 +17,7 @@ Each invocation publishes logs immediately.
 > Log record.
 
 ![Flow Logger](../../images/invocable-logger.png "Flow Logger")
+
+Sample Error Logging using Fault Path in a flow:
+
+![Flow Fault Path Logging](../../images/flow-fault-path-logging.png "Flow Fault Path Logging")
