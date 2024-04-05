@@ -114,6 +114,8 @@ nav:
       - PermissionManager: docs/reference/PermissionManager.md
       - LoggerTestUtil: docs/reference/LoggerTestUtil.md
   - Release Notes:
+    - latest: docs/release-notes/latest.md
+    - 1.49: docs/release-notes/1.49.md
     - 1.48: docs/release-notes/1.48.md
     - 1.47: docs/release-notes/1.47.md
     - 1.46: docs/release-notes/1.46.md
