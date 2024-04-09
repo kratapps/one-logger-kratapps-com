@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#149" class="md-skip">
+        <a href="#150" class="md-skip">
           Skip to content
         </a>
       
@@ -1985,29 +1985,22 @@
                   
 
 
-<h1 id="149">1.49</h1>
-<p>Version ID: 04t09000000BXVgAAO</p>
-<p><strong>Flow API</strong></p>
+<h1 id="150">1.50</h1>
+<p>Version ID: 04t09000000BXeoAAG</p>
+<p><strong>API</strong></p>
 <ul>
-<li>New invocable attributes:<ul>
-<li><code>Fault Message</code> - Used in the Fault Path. Use <code>{!$Flow.FaultMessage}</code>
-    global variable. Sets following fields on the log record:<ul>
-<li><code>ok__Exception_Message__c</code></li>
-<li><code>ok__Exception_Type__c</code></li>
-<li><code>ok__First_Error_Message__c</code></li>
-<li><code>ok__Stack_Trace__c</code></li>
-</ul>
-</li>
-<li><code>Inteview GUID</code> - Use <code>{!$Flow.InterviewGuid}</code> global variable. Sets the
-    <code>ok__Interview_Guid__c</code> field on the log record.</li>
-<li><code>SObject Id 2</code> - Flow variant of the <code>linkSObject2</code> method.</li>
+<li>New field on logs and log events: <code>Correlation ID</code>:<ul>
+<li>Hash value where similar logs have the same hash.</li>
+<li>Calculated from <code>Log_Level__c</code>, <code>Fully_Qualified_Source__c</code>,
+    <code>Exception_Type__c</code>, <code>First_Error_Status_Code__c</code> and from first 20
+    characters of <code>First_Error_Message__c</code>.</li>
 </ul>
 </li>
 </ul>
-<p><strong>Slack Plugin</strong></p>
+<p><strong>UI</strong></p>
 <ul>
-<li>In Slack message, <code>ok__Org_Domain_URL__c</code> is used as the base URL in links
-    instead of <code>Url.getSalesforceBaseUrl()</code>.</li>
+<li>Logs Explorer - Add glow animation around the refresh button when filter is
+    changed.</li>
 </ul>
 
 
