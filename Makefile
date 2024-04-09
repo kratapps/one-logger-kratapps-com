@@ -6,4 +6,7 @@ build:
 	
 deploy:
 	git pull
-	python3 -m mkdocs gh-deploy
+	echo "one-logger.com" > docs/CNAME
+	python3 -m mkdocs gh-deploy -r origin
+	echo "logger.kratapps.com" > docs/CNAME
+	python3 -m mkdocs gh-deploy -r tmp
