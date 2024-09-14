@@ -3,10 +3,9 @@ serve:
 	
 build:
 	python3 -m mkdocs build
-	
-deploy:
-	git pull
-	echo "one-logger.com" > docs/CNAME
-	python3 -m mkdocs gh-deploy -r origin
-	echo "logger.kratapps.com" > docs/CNAME
-	python3 -m mkdocs gh-deploy -r tmp
+
+docker-build-image:
+	docker build -t py .
+
+docker-build:
+	docker run -p 8000:8000 -v "$(PWD):/app" -t py mkdocs build --site-dir docs/

@@ -1,4 +1,5 @@
 site_name: One Logger
+docs_dir: src
 theme:
   name: material
   logo: images/logo_kratapps.svg
