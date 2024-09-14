@@ -1,3 +1,0 @@
-# LWC Logging
-
-Coming soon!
